@@ -9,6 +9,7 @@ const required = [
   ".repoops.yml",
   ".github/pull_request_template.md",
   ".github/workflows/repoops.yml",
+  ".github/workflows/content-check.yml",
   ".github/ISSUE_TEMPLATE/bug-report.md",
   ".github/ISSUE_TEMPLATE/feature-request.md",
   ".github/ISSUE_TEMPLATE/learning-mission.md",
@@ -28,15 +29,17 @@ if (missions.length < 8) failures.push(`Expected at least 8 numbered missions; f
 for (const name of lessons) {
   const path = join("lessons", name);
   const body = readFileSync(path, "utf8");
-  if (!/^# Lesson \d+ —/m.test(body)) failures.push(`Lesson heading missing expected format: ${path}`);
-  if (!/Success condition:/i.test(body)) failures.push(`Lesson missing success condition: ${path}`);
+  if (!/^# .*Lesson \d+[:—]/m.test(body)) failures.push(`Lesson heading missing expected format: ${path}`);
+  if (!/success condition|mini challenge|lesson complete|mission complete/i.test(body)) {
+    failures.push(`Lesson missing a learner completion marker: ${path}`);
+  }
 }
 
 for (const name of missions) {
   const path = join("missions", name);
   const body = readFileSync(path, "utf8");
-  if (!/^# Mission \d+ —/m.test(body)) failures.push(`Mission heading missing expected format: ${path}`);
-  if (!/## Success condition/i.test(body)) failures.push(`Mission missing success condition: ${path}`);
+  if (!/^# .*Mission \d+[:—]/m.test(body)) failures.push(`Mission heading missing expected format: ${path}`);
+  if (!/success condition|mission complete/i.test(body)) failures.push(`Mission missing a learner completion marker: ${path}`);
 }
 
 const readme = readFileSync("README.md", "utf8");

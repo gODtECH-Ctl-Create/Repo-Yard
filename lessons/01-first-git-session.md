@@ -58,3 +58,5 @@ Then run:
 ```bash
 git remote -v
 ```
+
+**Success condition:** you can explain what was copied to your computer, which branch you are on, and what remote points back to GitHub.

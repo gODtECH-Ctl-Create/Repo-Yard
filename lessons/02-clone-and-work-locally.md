@@ -58,3 +58,5 @@ Remote repository  → pushed branch on GitHub
 ```
 
 Once this mental model clicks, Git gets much easier.
+
+**Success condition:** you can identify whether a change is only local, staged, committed, or already pushed to GitHub.
