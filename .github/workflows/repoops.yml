@@ -33,4 +33,4 @@ jobs:
       queue: max
     steps:
       - name: Run RepoOps
-        uses: gODtECH-Ctl-Create/RepoOps@v0.4.1
+        uses: gODtECH-Ctl-Create/RepoOps@v0.4.0
