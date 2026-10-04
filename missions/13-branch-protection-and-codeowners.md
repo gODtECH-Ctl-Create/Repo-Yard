@@ -1,5 +1,18 @@
 # Mission 13 — Protect the Repository
 
+## 🧰 What you need
+
+- A GitHub repository where you have permission to change repository rules.
+- GitHub in a browser.
+- Git + an editor for the CODEOWNERS change.
+
+Recommended: VS Code + integrated terminal. See [START-HERE.md](../START-HERE.md).
+
+## 📍 Where you work
+
+Configure branch protection/rules in the repository's **GitHub Settings/Rules** area. Create the CODEOWNERS file on **your computer**, then push it through a PR.
+
+
 ## 🎯 Objective
 
 Use repository governance to make unsafe changes harder.
