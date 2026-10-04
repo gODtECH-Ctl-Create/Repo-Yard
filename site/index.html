@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Repo Yard is a hands-on Git and GitHub learning ground where you learn by creating branches, issues, commits, pull requests, reviews, conflicts, releases and real repository workflows.">
+  <meta name="theme-color" content="#0b0d12">
+  <meta property="og:title" content="Repo Yard — Learn Git by Actually Using Git">
+  <meta property="og:description" content="A hands-on Git and GitHub learning ground. Read less. Do more. Build the muscle.">
+  <meta property="og:type" content="website">
+  <title>Repo Yard — Learn Git by Actually Using Git</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="nav-shell">
+    <nav class="nav wrap" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Repo Yard home">
+        <span class="brand-mark">RY</span>
+        <span>Repo Yard</span>
+      </a>
+      <div class="nav-links">
+        <a href="#journey">Journey</a>
+        <a href="#practice">Practice</a>
+        <a href="#collab">Collaboration</a>
+        <a href="#advanced">Advanced</a>
+      </div>
+      <a class="button button-small" href="https://github.com/gODtECH-Ctl-Create/Repo-Yard" target="_blank" rel="noreferrer">Open Repo</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> Git + GitHub, learned by doing</div>
+        <h1>Stop memorising Git.<br><span>Start using it.</span></h1>
+        <p class="hero-lede">Repo Yard turns Git and GitHub into a real workshop. Clone a repo, work locally, branch, commit, push, open Pull Requests, review other people's work, break things, fix them, and learn the workflow for real.</p>
+        <div class="hero-actions">
+          <a class="button" href="https://github.com/gODtECH-Ctl-Create/Repo-Yard/blob/main/missions/01-clone-the-yard.md" target="_blank" rel="noreferrer">Start Mission 01 ↗</a>
+          <a class="button button-ghost" href="https://github.com/gODtECH-Ctl-Create/Repo-Yard" target="_blank" rel="noreferrer">Explore the repository</a>
+        </div>
+        <div class="hero-notes">
+          <span>14 lessons</span>
+          <span>11 missions</span>
+          <span>Real GitHub workflow</span>
+          <span>Beginner → advanced</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="terminal-top"><span></span><span></span><span></span><b>repo-yard</b></div>
+        <div class="terminal">
+          <p><i>$</i> git clone Repo-Yard.git</p>
+          <p><i>$</i> cd Repo-Yard</p>
+          <p><i>$</i> git switch -c feat/my-change</p>
+          <p><i>$</i> git status</p>
+          <p class="muted">On branch <strong>feat/my-change</strong></p>
+          <p><i>$</i> git add .</p>
+          <p><i>$</i> git commit -m "docs: make the lesson better"</p>
+          <p><i>$</i> git push -u origin feat/my-change</p>
+          <p class="success">✓ Branch is on GitHub. Open the Pull Request.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="wrap strip-grid">
+        <div><strong>Read</strong><span>Understand the idea</span></div>
+        <div><strong>Do</strong><span>Use the command</span></div>
+        <div><strong>Break</strong><span>Meet real problems</span></div>
+        <div><strong>Fix</strong><span>Recover with confidence</span></div>
+        <div><strong>Explain</strong><span>Prove you understand it</span></div>
+      </div>
+    </section>
+
+    <section id="journey" class="section wrap">
+      <div class="section-heading">
+        <div class="eyebrow">THE YARD JOURNEY</div>
+        <h2>From “what is push?” to “hand me the repo.”</h2>
+        <p>Each level adds a real piece of the developer workflow. You do not jump straight into advanced commands without understanding where your work lives.</p>
+      </div>
+      <div class="level-grid">
+        <article class="level-card level-green"><span>01</span><h3>Beginner</h3><p>Git, GitHub, clone, status, diff, staging and commits.</p></article>
+        <article class="level-card level-blue"><span>02</span><h3>Builder</h3><p>Branches, remotes, tracking branches, push, pull and fetch.</p></article>
+        <article class="level-card level-purple"><span>03</span><h3>Contributor</h3><p>Issues, Pull Requests, reviews, updates, forks and upstream.</p></article>
+        <article class="level-card level-orange"><span>04</span><h3>Problem Solver</h3><p>Conflicts, restore, reset, revert, stash and reflog recovery.</p></article>
+        <article class="level-card level-red"><span>05</span><h3>Advanced</h3><p>Rebase, cherry-pick, scaffolding, templates and releases.</p></article>
+        <article class="level-card level-dark"><span>06</span><h3>Team Ready</h3><p>Actions, CODEOWNERS, branch protection, maintenance and open-source habits.</p></article>
+      </div>
+    </section>
+
+    <section id="practice" class="section section-alt">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">THE PRACTICE LAB</div>
+          <h2>You learn Git by moving a change.</h2>
+          <p>The most important Repo Yard skill is knowing exactly where your work is at every step.</p>
+        </div>
+
+        <div class="workflow-layout">
+          <div class="workflow-map">
+            <div class="node node-active" data-step="working">Your computer</div>
+            <div class="arrow">↓</div>
+            <div class="node" data-step="staged">Staging area</div>
+            <div class="arrow">↓</div>
+            <div class="node" data-step="committed">Local repository</div>
+            <div class="arrow">↓</div>
+            <div class="node" data-step="pushed">GitHub branch</div>
+            <div class="arrow">↓</div>
+            <div class="node" data-step="review">Pull Request</div>
+            <div class="arrow">↓</div>
+            <div class="node" data-step="merged">main</div>
+          </div>
+
+          <div class="practice-card">
+            <div class="practice-tag">INTERACTIVE MENTAL MODEL</div>
+            <h3 id="step-title">You edited a file locally.</h3>
+            <p id="step-copy">The change exists on your computer, but Git has not staged or committed it yet.</p>
+            <div class="practice-command" id="step-command">git status</div>
+            <div class="step-buttons">
+              <button type="button" class="step-button active" data-step-button="working">1 · Edit</button>
+              <button type="button" class="step-button" data-step-button="staged">2 · Stage</button>
+              <button type="button" class="step-button" data-step-button="committed">3 · Commit</button>
+              <button type="button" class="step-button" data-step-button="pushed">4 · Push</button>
+              <button type="button" class="step-button" data-step-button="review">5 · PR</button>
+              <button type="button" class="step-button" data-step-button="merged">6 · Merge</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collab" class="section wrap">
+      <div class="split-heading">
+        <div>
+          <div class="eyebrow">REAL COLLABORATION</div>
+          <h2>GitHub itself becomes the classroom.</h2>
+        </div>
+        <p>Repo Yard does not simulate teamwork with fake buttons. Learners use Issues, branches, Pull Requests and reviews on GitHub itself.</p>
+      </div>
+
+      <div class="collab-grid">
+        <article><span class="icon">01</span><h3>Pick an Issue</h3><p>Find a scoped task with a clear success condition.</p></article>
+        <article><span class="icon">02</span><h3>Claim the work</h3><p>Use RepoOps to show who is actively working on it.</p></article>
+        <article><span class="icon">03</span><h3>Work locally</h3><p>Clone, branch, edit, stage, commit and push.</p></article>
+        <article><span class="icon">04</span><h3>Open a PR</h3><p>Write the context a reviewer actually needs.</p></article>
+        <article><span class="icon">05</span><h3>Review + respond</h3><p>Read comments, make follow-up commits and resolve threads.</p></article>
+        <article><span class="icon">06</span><h3>Merge safely</h3><p>Let checks and review protect the shared main branch.</p></article>
+      </div>
+    </section>
+
+    <section id="advanced" class="section section-alt">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">WHEN THE EASY STUFF STOPS BEING EASY</div>
+          <h2>Then we get into the stuff people usually fear.</h2>
+          <p>Conflicts. Recovery. Rebase. Cherry-pick. Releases. Repository automation. You learn each one with a reason, not as a command trivia test.</p>
+        </div>
+
+        <div class="advanced-grid">
+          <a href="https://github.com/gODtECH-Ctl-Create/Repo-Yard/blob/main/missions/07-conflict-lab.md" target="_blank" rel="noreferrer"><span>↯</span><strong>Conflict Lab</strong><small>Intentionally create a conflict. Resolve it.</small></a>
+          <a href="https://github.com/gODtECH-Ctl-Create/Repo-Yard/blob/main/missions/09-recovery.md" target="_blank" rel="noreferrer"><span>↶</span><strong>Recovery</strong><small>Restore, reset, revert, stash and reflog.</small></a>
+          <a href="https://github.com/gODtECH-Ctl-Create/Repo-Yard/blob/main/lessons/10-rebase-and-cherry-pick.md" target="_blank" rel="noreferrer"><span>⇄</span><strong>History Control</strong><small>Understand rebase and cherry-pick safely.</small></a>
+          <a href="https://github.com/gODtECH-Ctl-Create/Repo-Yard/blob/main/lessons/12-github-actions.md" target="_blank" rel="noreferrer"><span>⚙</span><strong>Automation</strong><small>Build checks with GitHub Actions.</small></a>
+          <a href="https://github.com/gODtECH-Ctl-Create/Repo-Yard/blob/main/lessons/13-branch-protection-and-codeowners.md" target="_blank" rel="noreferrer"><span>◈</span><strong>Repository Safety</strong><small>Branch protection and CODEOWNERS.</small></a>
+          <a href="https://github.com/gODtECH-Ctl-Create/Repo-Yard/blob/main/lessons/14-tags-releases-and-maintenance.md" target="_blank" rel="noreferrer"><span>◉</span><strong>Ship + Maintain</strong><small>Tags, releases and keeping a repo healthy.</small></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta wrap">
+      <div class="cta-card">
+        <div>
+          <div class="eyebrow">READY?</div>
+          <h2>Open the repo. Pick a mission. Do the work.</h2>
+          <p>Repo Yard is open to learners, contributors, maintainers and anyone who wants to get comfortable with real Git and GitHub workflows.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="button" href="https://github.com/gODtECH-Ctl-Create/Repo-Yard" target="_blank" rel="noreferrer">Enter the Yard ↗</a>
+          <a class="button button-ghost" href="https://github.com/gODtECH-Ctl-Create/RepoOps" target="_blank" rel="noreferrer">See RepoOps ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Repo Yard · Built with a Nigerian developer spirit.</span>
+      <span><a href="https://github.com/gODtECH-Ctl-Create/Repo-Yard" target="_blank" rel="noreferrer">GitHub</a> · <a href="https://github.com/gODtECH-Ctl-Create/RepoOps" target="_blank" rel="noreferrer">RepoOps</a></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
