@@ -1,0 +1,177 @@
+name: Repo Yard Operations System
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+  pull_request_target:
+    types: [opened, reopened, synchronize, closed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: ryos-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  operate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout course definitions
+        uses: actions/checkout@v7
+
+      - name: Run RYOS
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          EVENT: ${{ github.event_name }}
+          ACTION: ${{ github.event.action }}
+          EVENT_PATH: ${{ github.event_path }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          json() { gh api "$1" --jq "$2"; }
+          issue_comment() { gh api "repos/$REPO/issues/$1/comments" --method POST -f body="$2" >/dev/null; }
+          ensure_label() { gh api "repos/$REPO/labels" --method POST -f name="$1" -f color="$2" -f description="$3" >/dev/null 2>&1 || true; }
+          find_journey() { gh issue list --repo "$REPO" --state all --search "[Learner] @$1 — Journey" --json number,title,state,url --jq '.[] | select(.title == "[Learner] @"+$ENV.USER+" — Journey" and .state == "OPEN") | .number' 2>/dev/null | head -1; }
+          journey_for() {
+            local user="$1"
+            USER="$user" find_journey "$user"
+          }
+          create_journey() {
+            local user="$1" source_issue="${2:-}" existing
+            existing=$(journey_for "$user" || true)
+            if [[ -n "$existing" ]]; then echo "$existing"; return; fi
+            local body="<!-- ryos:journey:v1 -->
+# 🎒 Repo Yard Learner Journey
+
+**Learner:** @$user
+
+## Current mission
+**M00 — Set Up Your Git Workshop**
+
+## Progress
+**0 / 16 missions** · **0 XP**
+
+## Mission map
+Start with [Mission 00](https://github.com/$REPO/blob/main/missions/00-workshop-setup.md).
+
+## 🏆 Badges
+None yet.
+
+## 🧭 Commands
+`/journey` · `/help` · `/checkpoint M00` · `/badge git-foundations`
+
+> RYOS keeps the operations state. The repository and GitHub remain the source of truth."
+            number=$(gh issue create --repo "$REPO" --title "[Learner] @$user — Journey" --body "$body" --label "ryos:journey,status: learning" --json number --jq .number)
+            if [[ -n "$source_issue" ]]; then issue_comment "$source_issue" "🎒 Your Repo Yard Journey is ready: https://github.com/$REPO/issues/$number"; fi
+            echo "$number"
+          }
+          refresh_journey() {
+            local user="$1" journey="$2"
+            local comments completed xp progress next
+            comments=$(gh api "repos/$REPO/issues/$journey/comments?per_page=100" --paginate 2>/dev/null || echo '[]')
+            completed=$(printf '%s' "$comments" | jq -r '.[].body // ""' | grep -Eo 'ryos:(?:mission-complete|self-complete):M[0-9]{2}' | sed 's/.*://' | sort -u | tr '\n' ' ' || true)
+            progress=0; xp=0
+            for mission in $(printf '%s\n' "$completed"); do
+              found=$(jq -r --arg id "$mission" '.missions[] | select(.id==$id) | .xp' course.json)
+              if [[ -n "$found" ]]; then progress=$((progress+1)); xp=$((xp+found)); fi
+            done
+            next=$(jq -r --argjson done "$(printf '%s\n' "$completed" | jq -R . | jq -s .)" '.missions[] | select((.id as $id | ($done | index($id))) == null) | .id' course.json | head -1)
+            [[ -z "$next" ]] && next="M15"
+            title=$(jq -r --arg id "$next" '.missions[] | select(.id==$id) | .title' course.json)
+            map=$(jq -r --argjson done "$(printf '%s\n' "$completed" | jq -R . | jq -s .)" '.missions[] | "- [" + (if ($done | index(.id)) then "x" else " " end) + "] " + .id + " — " + .title' course.json)
+            body="<!-- ryos:journey:v1 -->
+# 🎒 Repo Yard Learner Journey
+
+**Learner:** @$user
+
+## Current mission
+**$next — $title**
+
+## Progress
+**$progress / 16 missions** · **$xp XP**
+
+## Mission map
+$map
+
+## 🏆 Badges
+Request a review with `/badge git-foundations` (or another badge ID from [achievements](https://github.com/$REPO/tree/main/achievements)).
+
+## 🧭 Next action
+Open the mission above and perform it in your own Git environment and on GitHub.
+
+## Commands
+`/journey` · `/help` · `/checkpoint M00` · `/badge <badge-id>`
+
+> Self-checks are clearly marked. RYOS never pretends GitHub saw your local terminal."
+            gh api "repos/$REPO/issues/$journey" --method PATCH -f body="$body" >/dev/null
+          }
+          for spec in "ryos:start 1f6feb Start a learner Journey" "ryos:journey 6f42c1 Learner Journey issue" "ryos:badge-request f9c74f Achievement request" "status: learning 238636 Learner currently progressing"; do
+            read -r name color desc <<< "$spec"; ensure_label "$name" "$color" "$desc"
+          done
+
+          if [[ "$EVENT" == "issues" && "$ACTION" == "opened" ]]; then
+            issue=$(cat "$EVENT_PATH")
+            labels=$(printf '%s' "$issue" | jq -r '[.issue.labels[].name] | join(",")')
+            user=$(printf '%s' "$issue" | jq -r '.issue.user.login')
+            number=$(printf '%s' "$issue" | jq -r '.issue.number')
+            if [[ ",$labels," == *",ryos:start,"* ]]; then create_journey "$user" "$number" >/dev/null; fi
+            if [[ ",$labels," == *",ryos:badge-request,"* ]]; then
+              journey=$(journey_for "$user" || true)
+              if [[ -z "$journey" ]]; then issue_comment "$number" "❌ No Journey found. Use `/start` first."; else issue_comment "$number" "🔎 Badge request received. RYOS will check the Journey evidence and identify any human-review requirements: https://github.com/$REPO/issues/$journey"; fi
+            fi
+          fi
+
+          if [[ "$EVENT" == "issue_comment" && "$ACTION" == "created" ]]; then
+            payload=$(cat "$EVENT_PATH")
+            is_pr=$(printf '%s' "$payload" | jq -r '.issue.pull_request != null')
+            [[ "$is_pr" == "true" ]] && exit 0
+            text=$(printf '%s' "$payload" | jq -r '.comment.body // ""')
+            user=$(printf '%s' "$payload" | jq -r '.comment.user.login')
+            number=$(printf '%s' "$payload" | jq -r '.issue.number')
+            case "$text" in
+              /start*) journey=$(create_journey "$user"); issue_comment "$number" "🎒 Your Journey: https://github.com/$REPO/issues/$journey" ;;
+              /journey*) journey=$(journey_for "$user" || true); if [[ -z "$journey" ]]; then issue_comment "$number" "No Journey found yet. Use `/start`."; else issue_comment "$number" "🎒 Your Journey: https://github.com/$REPO/issues/$journey"; fi ;;
+              /help*) issue_comment "$number" '🧭 **RYOS commands** — `/start` · `/journey` · `/checkpoint M00` · `/badge git-foundations`' ;;
+              /checkpoint*) mission=$(printf '%s' "$text" | grep -Eo 'M[0-9]{2}' | head -1 || true); journey=$(journey_for "$user" || true); if [[ -n "$mission" && -n "$journey" ]]; then issue_comment "$journey" "📝 **Self-check recorded:** <!-- ryos:self-complete:$mission -->
+
+GitHub cannot automatically observe this local checkpoint. Treat it as learner-declared evidence, not automated proof."; refresh_journey "$user" "$journey"; else issue_comment "$number" 'Use `/checkpoint M00` after creating your Journey.'; fi ;;
+              /badge*) badge=$(printf '%s' "$text" | awk '{print tolower($2)}'); journey=$(journey_for "$user" || true); [[ -z "$journey" ]] && issue_comment "$number" 'No Journey found yet. Use `/start`.' && exit 0; req=$(jq -r --arg id "$badge" '.badges[] | select(.id==$id) | .requires[]' course.json); comments=$(gh api "repos/$REPO/issues/$journey/comments?per_page=100" --paginate); missing=""; for m in $req; do if ! printf '%s' "$comments" | grep -q "ryos:\(mission-complete\|self-complete\):$m"; then missing+="$m "; fi; done; if [[ -n "$missing" ]]; then issue_comment "$number" "🏆 **$badge** is not ready yet. Missing: $missing"; else issue_comment "$number" "🏆 **$badge** is eligible for review. RYOS found every required mission marker in your Journey: https://github.com/$REPO/issues/$journey"; fi ;;
+            esac
+          fi
+
+          if [[ "$EVENT" == "pull_request_target" ]]; then
+            payload=$(cat "$EVENT_PATH")
+            pr=$(printf '%s' "$payload" | jq -r '.pull_request.number')
+            author=$(printf '%s' "$payload" | jq -r '.pull_request.user.login')
+            merged=$(printf '%s' "$payload" | jq -r '.pull_request.merged')
+            text=$(printf '%s\n%s' "$(printf '%s' "$payload" | jq -r '.pull_request.title // ""')" "$(printf '%s' "$payload" | jq -r '.pull_request.body // ""')")
+            mission=$(printf '%s' "$text" | grep -Eio 'mission[[:space:]:#_-]*m?[0-9]{1,2}' | grep -Eio 'm?[0-9]{1,2}' | tail -1 | sed -E 's/^M/m/; s/^m([0-9])$/M0\1/; s/^m/M/' || true)
+            [[ -z "$mission" ]] && exit 0
+            mission=$(printf '%s' "$mission" | tr '[:lower:]' '[:upper:]')
+            exists=$(jq -r --arg id "$mission" '.missions[] | select(.id==$id) | .id' course.json)
+            [[ -z "$exists" ]] && exit 0
+            journey=$(journey_for "$author" || true)
+            [[ -z "$journey" ]] && journey=$(create_journey "$author")
+            if [[ "$ACTION" == "opened" || "$ACTION" == "reopened" || "$ACTION" == "synchronize" ]]; then
+              issue_comment "$pr" "🧭 **RYOS mission check:** $mission detected. This PR is linked to your learner Journey. Merge it when the reviewer and repository rules are satisfied."
+            fi
+            if [[ "$ACTION" == "closed" && "$merged" == "true" ]]; then
+              xp=$(jq -r --arg id "$mission" '.missions[] | select(.id==$id) | .xp')
+              issue_comment "$journey" "🎉 **Mission $mission complete.** <!-- ryos:mission-complete:$mission -->
+
++$xp XP
+
+Evidence: https://github.com/$REPO/pull/$pr
+
+RYOS will refresh your Journey and point you to the next mission."
+              refresh_journey "$author" "$journey"
+              issue_comment "$pr" "✅ **RYOS recorded $mission as complete.** Journey: https://github.com/$REPO/issues/$journey"
+            fi
+          fi
