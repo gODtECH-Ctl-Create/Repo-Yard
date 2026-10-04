@@ -1,20 +1,35 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join, resolve } from "node:path";
 
 const required = [
   "README.md",
   "CONTRIBUTING.md",
   "SECURITY.md",
   "CODE_OF_CONDUCT.md",
+  "LICENSE",
+  ".gitignore",
+  "MAINTAINERS.md",
   ".repoops.yml",
   ".github/pull_request_template.md",
   ".github/CODEOWNERS",
   ".github/workflows/repoops.yml",
   ".github/workflows/content-check.yml",
+  ".github/dependabot.yml",
   ".github/ISSUE_TEMPLATE/bug-report.md",
   ".github/ISSUE_TEMPLATE/feature-request.md",
   ".github/ISSUE_TEMPLATE/learning-mission.md",
 ];
+
+const markdownFiles = [];
+function walk(dir) {
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    if (entry.name === ".git") continue;
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) walk(path);
+    else if (entry.name.endsWith(".md")) markdownFiles.push(path);
+  }
+}
+walk(".");
 
 const lessons = readdirSync("lessons").filter(name => /^\d+-.*\.md$/.test(name)).sort();
 const missions = readdirSync("missions").filter(name => /^\d+-.*\.md$/.test(name)).sort();
@@ -43,6 +58,17 @@ for (const name of missions) {
   if (!/success condition|mission complete/i.test(body)) failures.push(`Mission missing a learner completion marker: ${path}`);
 }
 
+for (const file of markdownFiles) {
+  const body = readFileSync(file, "utf8");
+  const links = [...body.matchAll(/!?\[[^\]]*\]\(([^)]+)\)/g)].map(m => m[1].trim());
+  for (const raw of links) {
+    const link = raw.split("#")[0].trim();
+    if (!link || /^(https?:\/\/|mailto:)/i.test(link)) continue;
+    const target = resolve(dirname(file), decodeURIComponent(link));
+    if (!existsSync(target)) failures.push(`Broken local link: ${file} → ${raw}`);
+  }
+}
+
 const readme = readFileSync("README.md", "utf8");
 for (const name of lessons) {
   if (!readme.includes(`lessons/${name}`)) failures.push(`README does not link lesson: ${name}`);
@@ -57,4 +83,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Repo Yard content check passed: ${lessons.length} lessons, ${missions.length} missions.`);
+console.log(`Repo Yard content check passed: ${lessons.length} lessons, ${missions.length} missions, ${markdownFiles.length} Markdown files checked.`);

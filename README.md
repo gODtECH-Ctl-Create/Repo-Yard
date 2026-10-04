@@ -1,5 +1,8 @@
 # 🏗️ Repo Yard
 
+[![Repo Yard Content Check](https://github.com/gODtECH-Ctl-Create/Repo-Yard/actions/workflows/content-check.yml/badge.svg)](https://github.com/gODtECH-Ctl-Create/Repo-Yard/actions/workflows/content-check.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **Learn Git and GitHub by actually using Git and GitHub.**
 
 Repo Yard is a hands-on learning repository for people who want to go from:
