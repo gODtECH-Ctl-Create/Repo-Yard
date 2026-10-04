@@ -1,22 +1,49 @@
-# Mission 11 — Build a Repository Workflow
+# Mission 11 — Repository Blueprint
 
-## Goal
+## 🎯 Objective
 
-Understand repository automation and protection as separate systems.
+Inspect a repository as an engineer, not just as a command runner.
 
-Inspect Repo Yard:
+## Scenario
+
+You inherit a repository and need to decide whether another developer could understand, contribute to and safely operate it.
+
+## Tasks
+
+Inspect:
 
 ```text
-.github/workflows/
-.github/pull_request_template.md
-.repoops.yml
+README.md
+CONTRIBUTING.md
+.github/
+lessons/
+missions/
+scripts/
 ```
 
-Answer:
-1. Which workflow validates repository content?
-2. Which system manages Issue claiming?
-3. What does the PR template enforce socially?
-4. What would branch protection enforce technically?
-5. Why should a workflow have only the permissions it needs?
+Then write a small repository blueprint covering:
 
-**Success condition:** design a basic repository workflow without confusing Actions, PR templates, Issue templates, and branch protection.
+1. where a new contributor should start;
+2. how changes are validated;
+3. where contribution rules live;
+4. which workflows have write permissions;
+5. how the repository documents ownership;
+6. what would be dangerous to change casually.
+
+Make your blueprint a Markdown file in your practice branch and open a PR with `Mission: M11`.
+
+## ✅ Success condition
+
+A reviewer can read your blueprint and understand how the repository is organized and operated.
+
+## 🔎 Evidence
+
+Link the Pull Request.
+
+## 🤖 Verification
+
+RYOS can verify the mission PR. The quality of the repository analysis remains human-reviewed.
+
+**Reward:** +200 XP
+
+**Next:** [Mission 12 — Build a GitHub Action](12-github-actions.md)
