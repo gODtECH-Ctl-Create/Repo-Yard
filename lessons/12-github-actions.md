@@ -1,5 +1,11 @@
 # Lesson 12 — GitHub Actions
 
+## 🧰 Tools & alternatives
+
+See [START-HERE.md](../START-HERE.md) for setup links and tool choices. **Recommended:** VS Code + integrated terminal + GitHub in your browser. **Alternatives:** another editor with PowerShell, Command Prompt, Git Bash, macOS Terminal or Linux Terminal.
+
+When a step happens locally, use your terminal/editor. When a step happens on GitHub, use the browser.
+
 GitHub Actions is GitHub's automation system. It can run checks, react to repository events and perform repository operations.
 
 ## Before you start
