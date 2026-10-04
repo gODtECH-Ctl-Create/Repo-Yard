@@ -1,0 +1,24 @@
+# RepoOps policy for Repo Yard
+commands:
+  claim: true
+  unclaim: true
+
+labels:
+  ready: "status: ready"
+  inProgress: "status: in-progress"
+
+assignments:
+  reminderAfterDays: 3
+  expireAfterDays: 7
+  autoRelease: false
+
+contributorLimits:
+  maxActiveAssignments: 2
+  limitMaintainers: false
+
+contributorGuidance:
+  enabled: true
+  requirements: "Git and GitHub account"
+  contributingUrl: "https://github.com/gODtECH-Ctl-Create/Repo-Yard/blob/main/CONTRIBUTING.md"
+  problemUrl: "https://github.com/gODtECH-Ctl-Create/Repo-Yard/issues/new"
+  upgradeUrl: "https://github.com/gODtECH-Ctl-Create/Repo-Yard/issues/new"
