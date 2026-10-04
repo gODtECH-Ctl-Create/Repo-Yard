@@ -1,14 +1,26 @@
 # Lesson 06 — Reviews and PR Updates
 
-Code review is a conversation about the change.
+Code review is a conversation about a proposed change. The reviewer is checking whether the change is correct, understandable and safe enough to merge.
 
-A reviewer can approve, leave comments, or request changes.
+## Before you start
+
+Open a real Pull Request in GitHub. Ask a teammate, maintainer or learning partner to review it.
+
+## Where do I review?
+
+Open the PR in GitHub and select the **Files changed** tab to inspect the actual diff. The **Conversation** tab contains the discussion and overall review state.
 
 ## Read before editing
 
-First understand what the reviewer noticed, whether it is blocking, and what outcome they expect.
+Before changing anything, identify:
+
+1. what the reviewer noticed;
+2. whether it blocks the PR;
+3. what result the reviewer expects.
 
 ## Push fixes to the same branch
+
+Make the correction locally, then:
 
 ```bash
 git add .
@@ -16,25 +28,25 @@ git commit -m "fix: address review feedback"
 git push
 ```
 
-There is normally no need to open a second PR.
+You normally do not need a second PR. The same PR updates.
 
 ## Reply clearly
 
-Good review replies explain what you changed, tested, or intentionally kept.
+A useful reply says what you changed, what you tested and, when appropriate, why you intentionally did not change something.
 
 ## Resolve responsibly
 
-Resolve a review thread when the requested work or discussion is actually complete.
+Resolve a review thread only after the requested work or discussion is actually complete.
 
 ## Self-review
 
-Before requesting another review:
+Before asking for another review:
 
 ```bash
 git status
 git diff main...HEAD
 ```
 
-Read your own PR as if you did not write it.
+**Success condition:** complete a real review cycle where at least one review comment leads to a follow-up commit.
 
-**Success condition:** complete a PR review cycle where at least one comment causes a follow-up commit.
+**Practice next:** [Mission 06 — Review and Update](../missions/06-review-and-update.md)

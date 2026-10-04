@@ -1,13 +1,19 @@
 # Lesson 08 — Forks and Upstream
 
-A fork is your GitHub copy of another repository.
+A **fork** is your GitHub copy of another repository. A **clone** is your local copy on your computer. You normally use both when contributing to a project you do not directly control.
 
-A clone is your local copy. They are different.
+## Before you start
 
-## External-contributor setup
+Open Repo Yard in GitHub while signed in. You must be able to create a fork on your GitHub account.
+
+## Where do I create the fork?
+
+On the Repo Yard GitHub page, choose **Fork** and create the fork under your own account.
+
+You will now have:
 
 ```text
-gODtECH-Ctl-Create/Repo-Yard
+Original Repo Yard on GitHub
             │
             ▼
        your GitHub fork
@@ -16,7 +22,9 @@ gODtECH-Ctl-Create/Repo-Yard
        your computer
 ```
 
-Clone your fork:
+## Clone your fork
+
+Copy your fork's HTTPS or SSH URL from GitHub, then:
 
 ```bash
 git clone https://github.com/<your-github-username>/Repo-Yard.git
@@ -25,12 +33,15 @@ cd Repo-Yard
 
 ## Add the original repository as upstream
 
+An **upstream remote** points back to the original project you forked.
+
 ```bash
 git remote add upstream https://github.com/gODtECH-Ctl-Create/Repo-Yard.git
 git remote -v
 ```
 
 Now:
+
 - `origin` → your fork;
 - `upstream` → original Repo Yard.
 
@@ -45,4 +56,6 @@ git push origin main
 
 Rebase is taught later.
 
-**Success condition:** set up `origin` and `upstream`, explain each one, and submit a PR from your fork.
+**Success condition:** you can explain why `origin` and `upstream` point to different GitHub repositories and submit a PR from your fork.
+
+**Practice next:** [Mission 08 — Fork and Upstream](../missions/08-fork-upstream.md)

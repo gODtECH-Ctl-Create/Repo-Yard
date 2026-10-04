@@ -1,10 +1,20 @@
 # Lesson 10 — Rebase and Cherry-pick
 
-These are advanced tools. Learn the mental model before memorizing commands.
+These are advanced history tools. Learn the mental model before memorizing commands.
 
-## Rebase
+## Before you start
 
-Rebase replays commits onto a new base:
+Use a disposable practice branch. Do not rewrite shared history just to experiment.
+
+## Rebase: what is it?
+
+**Rebase** takes commits from your branch and replays them on a different base. It can make a history easier to read, but the replayed commits receive new commit identities.
+
+Think: **move my private work so it appears to start from a newer point in history**.
+
+## Where do I run it?
+
+Run rebase in your terminal while you are on the branch you want to replay:
 
 ```bash
 git switch feat/my-change
@@ -12,24 +22,24 @@ git fetch origin
 git rebase origin/main
 ```
 
-This can create a cleaner linear history, but it rewrites history for the replayed commits.
-
 **Golden rule:** do not rebase shared history casually.
 
-## Cherry-pick
+## Cherry-pick: what is it?
 
-Cherry-pick applies the change from an existing commit as a new commit on your current branch:
+**Cherry-pick** copies the change introduced by one existing commit onto your current branch as a new commit.
 
 ```bash
 git cherry-pick <commit-sha>
 ```
 
-This is useful when one specific fix is needed elsewhere.
+Think: **I need this one particular change here, without taking the rest of that branch**.
 
-## When to choose
+## Compare the choices
 
-- Merge combines histories without rewriting existing commits.
-- Rebase intentionally replays work on a new base.
-- Cherry-pick takes a selected commit's change elsewhere.
+- Merge combines histories without rewriting the existing commits.
+- Rebase replays commits onto a new base.
+- Cherry-pick selects a specific commit's change for another branch.
 
-**Success condition:** explain merge, rebase, and cherry-pick without defining them only by their command names.
+**Success condition:** explain merge, rebase and cherry-pick in terms of what happens to the history, not just by naming the commands.
+
+**Practice next:** [Mission 10 — History Surgery](../missions/10-release.md)

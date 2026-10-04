@@ -1,10 +1,18 @@
 # Lesson 11 — Repository Scaffolding and Templates
 
-A professional repository is more than source code.
+A professional repository is more than source code. It also contains the instructions and structures that help people understand, contribute to and operate the project.
 
-Scaffolding means creating structures that keep a project understandable and repeatable.
+## Before you start
 
-Examples:
+Open Repo Yard on GitHub and browse the repository root.
+
+## What is scaffolding?
+
+**Scaffolding** means the initial structure that makes a project understandable and repeatable. It is the project skeleton, not the application logic.
+
+## Where do these files live?
+
+Common examples include:
 
 ```text
 README.md
@@ -21,22 +29,24 @@ docs/
 scripts/
 ```
 
-## Repository templates
+## What is a repository template?
 
-A reusable project template should include clear README guidance, contribution rules, templates, automation, licensing, and security guidance.
+A **repository template** is a prepared project starting point that another developer can copy when creating a new repository. It can include documentation, contribution rules, automation and useful defaults.
 
 ## Why this matters
 
-A new repository should not begin with an empty README and undocumented decisions.
+A new repository should not force every contributor to guess how it works.
 
 ## Practice
 
-Inspect Repo Yard itself.
+Inspect Repo Yard itself. Ask:
 
-Ask:
 - Why is the PR template under `.github`?
 - Why are workflows under `.github/workflows`?
 - Why is security guidance at the root?
 - Which files help a first-time contributor?
+- Which files are instructions for humans and which are instructions for automation?
 
-**Success condition:** design a minimal repository scaffold another developer could use to start a project.
+**Success condition:** design a minimal repository scaffold another developer could use to start a project and explain the purpose of each major part.
+
+**Practice next:** [Mission 11 — Repository Blueprint](../missions/11-actions-and-protection.md)

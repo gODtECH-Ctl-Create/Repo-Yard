@@ -1,31 +1,46 @@
 # Lesson 14 — Tags, Releases, and Maintenance
 
-A repository is not finished when code is merged.
+A repository is not finished when code is merged. Someone still needs to identify versions, communicate changes and keep the project healthy.
 
-## Tags
+## Before you start
 
-A tag is a named reference to a specific commit:
+Use a practice repository where you can safely create a tag and GitHub Release.
+
+## Tags: what are they?
+
+A **tag** is a named Git reference pointing to a specific commit. Teams commonly use version names such as `v0.1.0`.
+
+## Where do I create a tag?
+
+Create the tag in your local repository, then push it if you want GitHub to receive it.
 
 ```bash
 git tag v0.1.0
 git push origin v0.1.0
 ```
 
-## Releases
+## Releases: what are they?
 
-GitHub Releases provide a user-facing release entry around a version tag.
+A **GitHub Release** is a user-facing release entry associated with a tag. It is where you explain what changed and give users a clear version to refer to.
 
-A release can include version notes, changes, migration guidance, and useful links.
+On GitHub, open **Releases** → **Draft a new release**, choose the tag and write the release notes.
 
-## Maintenance
+## Maintenance: what does it mean?
 
-A healthy repository needs regular attention:
-- documentation corrections;
-- issue cleanup;
-- stale branch cleanup;
-- dependency and Action reviews;
-- accurate contributor guidance.
+Maintenance is the continuing work that keeps a repository useful and safe.
 
-Good maintenance treats documentation, Issues, Pull Requests, and automation as part of the product.
+Examples include correcting documentation, cleaning up Issues and stale branches, reviewing dependencies and Actions, and keeping contributor guidance accurate.
 
-**Success condition:** explain how a repository moves from merged change → tag → release → maintenance.
+## Where do I do maintenance?
+
+Review the repository on GitHub, make any needed code or documentation changes locally, then send normal Pull Requests for the improvements.
+
+## The complete picture
+
+```text
+merged change → tag → release → maintenance
+```
+
+**Success condition:** explain how a repository moves from merged work to a named release and then stays healthy through ongoing maintenance.
+
+**Practice next:** [Mission 14 — Ship and Maintain](../missions/14-release-and-maintenance.md)
