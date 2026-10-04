@@ -1,5 +1,15 @@
 # 📚 Repo Yard Course Map
 
+## 🧰 Start with the tools
+
+Before your first lesson, read [START-HERE.md](START-HERE.md). It explains what Git, GitHub, VS Code and the terminal are, where to get them, and the different ways you can complete Repo Yard tasks.
+
+**Recommended:** VS Code + its integrated terminal + GitHub in your browser.
+
+**Also supported:** PowerShell, Command Prompt, Git Bash, macOS/Linux Terminal, VS Code Source Control and another editor.
+
+Each lesson tells you which tool or location to use. When there is more than one reasonable way to complete a task, the alternatives are shown.
+
 Repo Yard is a real Git/GitHub workshop.
 
 Read a lesson, perform its mission on a real repository, prove the requested evidence, then advance.
