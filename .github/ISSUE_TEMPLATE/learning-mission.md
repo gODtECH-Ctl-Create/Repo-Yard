@@ -2,7 +2,6 @@
 name: 🎯 Create a learning mission
 about: Propose a practical Git or GitHub exercise
 title: "[Mission] "
-labels: "type: mission"
 assignees: ""
 ---
 

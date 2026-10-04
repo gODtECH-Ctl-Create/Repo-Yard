@@ -2,7 +2,6 @@
 name: 🐛 Broken lesson or command
 about: Report something that is incorrect, broken, or misleading
 title: "[Bug] "
-labels: "type: bug"
 assignees: ""
 ---
 

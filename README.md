@@ -119,7 +119,7 @@ For learners who are not repository collaborators, use the **fork → branch →
 - [04 — Pull, Push, and Sync](lessons/04-sync-local-and-remote.md)
 
 ### Collaboration
-- [05 — Pull Request Lifecycle](lessons/05-pull-request-lifecycle.md)
+- [05 — Issue to Pull Request Lifecycle](lessons/05-pull-request-lifecycle.md)
 - [06 — Reviews and PR Updates](lessons/06-reviews-and-pr-updates.md)
 - [07 — Conflicts](lessons/07-merge-conflicts.md)
 - [08 — Forks and Upstream](lessons/08-fork-upstream.md)

@@ -2,7 +2,6 @@
 name: 💡 Learning improvement
 about: Propose a new lesson, exercise, or repository improvement
 title: "[Idea] "
-labels: "type: enhancement"
 assignees: ""
 ---
 
