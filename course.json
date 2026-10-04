@@ -1,0 +1,287 @@
+{
+  "name": "Repo Yard",
+  "version": "1.0.0",
+  "missionCount": 16,
+  "levels": [
+    {
+      "id": "beginner",
+      "name": "Git Basics",
+      "gate": "M00-M04"
+    },
+    {
+      "id": "contributor",
+      "name": "Contributor Ready",
+      "gate": "M05-M08"
+    },
+    {
+      "id": "problem-solver",
+      "name": "Problem Solver",
+      "gate": "M09-M11"
+    },
+    {
+      "id": "repository-engineer",
+      "name": "Repository Engineer",
+      "gate": "M12-M14"
+    },
+    {
+      "id": "team-ready",
+      "name": "Team Ready",
+      "gate": "M15"
+    }
+  ],
+  "missions": [
+    {
+      "id": "M00",
+      "title": "Set Up Your Git Workshop",
+      "path": "missions/00-workshop-setup.md",
+      "xp": 50,
+      "level": "beginner",
+      "prerequisites": [],
+      "evidence": "self-check",
+      "next": "M01"
+    },
+    {
+      "id": "M01",
+      "title": "Clone the Yard",
+      "path": "missions/01-clone-the-yard.md",
+      "xp": 50,
+      "level": "beginner",
+      "prerequisites": [
+        "M00"
+      ],
+      "evidence": "repository",
+      "next": "M02"
+    },
+    {
+      "id": "M02",
+      "title": "Branch, Commit and Push",
+      "path": "missions/02-branch-commit-push.md",
+      "xp": 100,
+      "level": "beginner",
+      "prerequisites": [
+        "M01"
+      ],
+      "evidence": "repository",
+      "next": "M03"
+    },
+    {
+      "id": "M03",
+      "title": "Branch Control",
+      "path": "missions/03-branch-control.md",
+      "xp": 100,
+      "level": "beginner",
+      "prerequisites": [
+        "M02"
+      ],
+      "evidence": "repository",
+      "next": "M04"
+    },
+    {
+      "id": "M04",
+      "title": "Sync Safely",
+      "path": "missions/04-sync.md",
+      "xp": 100,
+      "level": "beginner",
+      "prerequisites": [
+        "M03"
+      ],
+      "evidence": "repository",
+      "next": "M05"
+    },
+    {
+      "id": "M05",
+      "title": "Open Your First Pull Request",
+      "path": "missions/05-first-pull-request.md",
+      "xp": 150,
+      "level": "contributor",
+      "prerequisites": [
+        "M04"
+      ],
+      "evidence": "github",
+      "next": "M06"
+    },
+    {
+      "id": "M06",
+      "title": "Review and Update",
+      "path": "missions/06-review-and-update.md",
+      "xp": 150,
+      "level": "contributor",
+      "prerequisites": [
+        "M05"
+      ],
+      "evidence": "collaboration",
+      "next": "M07"
+    },
+    {
+      "id": "M07",
+      "title": "Conflict Lab",
+      "path": "missions/07-conflict-lab.md",
+      "xp": 150,
+      "level": "contributor",
+      "prerequisites": [
+        "M06"
+      ],
+      "evidence": "github",
+      "next": "M08"
+    },
+    {
+      "id": "M08",
+      "title": "Fork and Upstream",
+      "path": "missions/08-fork-upstream.md",
+      "xp": 150,
+      "level": "contributor",
+      "prerequisites": [
+        "M07"
+      ],
+      "evidence": "github",
+      "next": "M09"
+    },
+    {
+      "id": "M09",
+      "title": "Recovery",
+      "path": "missions/09-recovery.md",
+      "xp": 150,
+      "level": "problem-solver",
+      "prerequisites": [
+        "M08"
+      ],
+      "evidence": "self-check",
+      "next": "M10"
+    },
+    {
+      "id": "M10",
+      "title": "History Surgery",
+      "path": "missions/10-release.md",
+      "xp": 200,
+      "level": "problem-solver",
+      "prerequisites": [
+        "M09"
+      ],
+      "evidence": "repository",
+      "next": "M11"
+    },
+    {
+      "id": "M11",
+      "title": "Repository Blueprint",
+      "path": "missions/11-actions-and-protection.md",
+      "xp": 200,
+      "level": "problem-solver",
+      "prerequisites": [
+        "M10"
+      ],
+      "evidence": "github",
+      "next": "M12"
+    },
+    {
+      "id": "M12",
+      "title": "Build a GitHub Action",
+      "path": "missions/12-github-actions.md",
+      "xp": 200,
+      "level": "repository-engineer",
+      "prerequisites": [
+        "M11"
+      ],
+      "evidence": "github",
+      "next": "M13"
+    },
+    {
+      "id": "M13",
+      "title": "Protect the Repository",
+      "path": "missions/13-branch-protection-and-codeowners.md",
+      "xp": 200,
+      "level": "repository-engineer",
+      "prerequisites": [
+        "M12"
+      ],
+      "evidence": "github",
+      "next": "M14"
+    },
+    {
+      "id": "M14",
+      "title": "Ship and Maintain",
+      "path": "missions/14-release-and-maintenance.md",
+      "xp": 250,
+      "level": "repository-engineer",
+      "prerequisites": [
+        "M13"
+      ],
+      "evidence": "github",
+      "next": "M15"
+    },
+    {
+      "id": "M15",
+      "title": "Maintainer Challenge",
+      "path": "missions/15-maintainer-challenge.md",
+      "xp": 500,
+      "level": "team-ready",
+      "prerequisites": [
+        "M14"
+      ],
+      "evidence": "collaboration",
+      "next": null
+    }
+  ],
+  "badges": [
+    {
+      "id": "git-foundations",
+      "name": "Git Foundations",
+      "requires": [
+        "M00",
+        "M01",
+        "M02",
+        "M03",
+        "M04"
+      ]
+    },
+    {
+      "id": "pr-starter",
+      "name": "PR Starter",
+      "requires": [
+        "M05",
+        "M06"
+      ]
+    },
+    {
+      "id": "problem-solver",
+      "name": "Problem Solver",
+      "requires": [
+        "M07",
+        "M08",
+        "M09",
+        "M10"
+      ]
+    },
+    {
+      "id": "repository-engineer",
+      "name": "Repository Engineer",
+      "requires": [
+        "M11",
+        "M12",
+        "M13",
+        "M14"
+      ]
+    },
+    {
+      "id": "team-ready",
+      "name": "Team Ready",
+      "requires": [
+        "M00",
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "M06",
+        "M07",
+        "M08",
+        "M09",
+        "M10",
+        "M11",
+        "M12",
+        "M13",
+        "M14",
+        "M15"
+      ]
+    }
+  ]
+}
