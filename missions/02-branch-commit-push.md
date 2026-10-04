@@ -1,5 +1,17 @@
 # 🎯 Mission 02: Branch, Commit and Push
 
+## 🧰 What you need
+
+- Git installed.
+- A GitHub account.
+- A browser for GitHub.
+- A terminal + editor. Recommended: VS Code + integrated terminal. Alternatives are listed in [START-HERE.md](../START-HERE.md).
+
+## 📍 Where you work
+
+The file editing, branch, commit and push work happens on your computer. The fork and Pull Request happen on GitHub in your browser.
+
+
 **Difficulty:** 🌱 Beginner
 
 Complete a real local-to-GitHub workflow.
