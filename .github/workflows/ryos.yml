@@ -46,7 +46,7 @@ jobs:
 
           find_journey() {
             local user="$1"
-            gh api --paginate "repos/$REPO/issues?state=open&per_page=100" --arg user "$user" --jq '.[] | select(.pull_request == null and .title == ("[Learner] @" + $user + " — Journey")) | .number' | head -1
+            gh api --paginate "repos/$REPO/issues?state=open&per_page=100" --jq ".[] | select(.pull_request == null and .title == \"[Learner] @$user — Journey\") | .number" | head -1
           }
 
           create_journey() {
@@ -76,7 +76,7 @@ None yet.
 
 > Self-checks are learner-declared. GitHub-visible evidence is verified from real repository activity."
             local number
-            number=$(gh issue create --repo "$REPO" --title "[Learner] @$user — Journey" --body "$body" --label "ryos:journey,status: learning" --json number --jq .number)
+            number=$(gh issue create --repo "$REPO" --title "[Learner] @$user — Journey" --body "$body" --label "ryos:journey" --label "status: learning" --json number --jq .number)
             if [[ -n "$source" ]]; then issue_comment "$source" "🎒 Your Journey is ready: https://github.com/$REPO/issues/$number"; fi
             echo "$number"
           }
