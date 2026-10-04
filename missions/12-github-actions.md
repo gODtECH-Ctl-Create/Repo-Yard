@@ -1,5 +1,18 @@
 # Mission 12 — Build a GitHub Action
 
+## 🧰 What you need
+
+- A GitHub repository where you can create a workflow.
+- A browser for GitHub.
+- Git + an editor for your workflow file.
+
+Recommended: VS Code + integrated terminal. You can use another editor and terminal; see [START-HERE.md](../START-HERE.md).
+
+## 📍 Where you work
+
+Create the workflow file in the repository on **your computer**, push it to GitHub, then inspect the workflow run on the repository's **Actions** page.
+
+
 ## 🎯 Objective
 
 Turn a repository rule into an automated check.
