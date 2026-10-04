@@ -8,6 +8,7 @@ const required = [
   "CODE_OF_CONDUCT.md",
   ".repoops.yml",
   ".github/pull_request_template.md",
+  ".github/CODEOWNERS",
   ".github/workflows/repoops.yml",
   ".github/workflows/content-check.yml",
   ".github/ISSUE_TEMPLATE/bug-report.md",
@@ -45,6 +46,9 @@ for (const name of missions) {
 const readme = readFileSync("README.md", "utf8");
 for (const name of lessons) {
   if (!readme.includes(`lessons/${name}`)) failures.push(`README does not link lesson: ${name}`);
+}
+for (const name of missions) {
+  if (!readme.includes(`missions/${name}`)) failures.push(`README does not link mission: ${name}`);
 }
 
 if (failures.length) {

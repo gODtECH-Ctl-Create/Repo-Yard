@@ -2,6 +2,12 @@
 
 <!-- What does this Pull Request change? -->
 
+## Learning path
+
+- Lesson / mission:
+- Difficulty:
+- Related Issue:
+
 ## Changes
 
 - 
@@ -30,6 +36,10 @@
 <!-- Use: Closes #123 -->
 
 Closes #
+
+## Reviewer focus
+
+<!-- Tell the reviewer what to pay attention to. -->
 
 ## Checklist
 
