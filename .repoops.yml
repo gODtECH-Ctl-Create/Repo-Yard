@@ -22,3 +22,7 @@ contributorGuidance:
   contributingUrl: "https://github.com/gODtECH-Ctl-Create/Repo-Yard/blob/main/CONTRIBUTING.md"
   problemUrl: "https://github.com/gODtECH-Ctl-Create/Repo-Yard/issues/new"
   upgradeUrl: "https://github.com/gODtECH-Ctl-Create/Repo-Yard/issues/new"
+
+contributorDiary:
+  enabled: true
+  issueNumber: 9
