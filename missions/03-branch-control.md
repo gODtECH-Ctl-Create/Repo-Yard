@@ -2,6 +2,17 @@
 
 ## Goal
 
+## 🧰 What you need
+
+A local Git repository, a terminal and an editor. VS Code's terminal, PowerShell, Git Bash, Command Prompt, macOS Terminal and Linux terminals are all valid choices.
+
+See [START-HERE.md](../START-HERE.md) when you need help choosing a tool.
+
+## 📍 Where you work
+
+Do this mission inside the repository folder on your computer. Branch operations are local Git operations unless the mission explicitly tells you to push something to GitHub.
+
+
 Learn to create, inspect, switch, and delete local branches.
 
 ## Do
