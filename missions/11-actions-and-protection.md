@@ -1,5 +1,18 @@
 # Mission 11 — Repository Blueprint
 
+## 🧰 What you need
+
+- Access to a repository you can safely inspect.
+- GitHub in a browser.
+- Git + an editor for your blueprint branch.
+
+Recommended: VS Code + integrated terminal. See [START-HERE.md](../START-HERE.md) for alternatives.
+
+## 📍 Where you work
+
+Inspect the repository on **GitHub or in your local clone**, write the blueprint locally, then push it and open the PR on GitHub.
+
+
 ## 🎯 Objective
 
 Inspect a repository as an engineer, not just as a command runner.
