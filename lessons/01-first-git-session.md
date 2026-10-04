@@ -1,5 +1,11 @@
 # 🌱 Lesson 01: Your First Git Session
 
+
+## 🧰 Tools & alternatives
+
+See [START-HERE.md](../START-HERE.md) for setup links and tool choices. **Recommended:** VS Code + integrated terminal + GitHub in your browser. **Alternatives:** another editor with PowerShell, Command Prompt, Git Bash, macOS Terminal or Linux Terminal.
+
+Use Git commands in a terminal when the lesson shows commands. Use GitHub in the browser when the lesson says to open a repository, Issue or Pull Request.
 Welcome to Repo Yard. You will do the work on **your own computer** using Git, then use GitHub when the lesson asks you to.
 
 ## What is a Git workshop?

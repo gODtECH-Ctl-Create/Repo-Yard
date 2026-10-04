@@ -1,5 +1,19 @@
 # Mission 14 — Ship and Maintain
 
+## 🧰 What you need
+
+- A GitHub repository you can tag and release safely.
+- Git + a terminal for the tag.
+- A browser for the GitHub Release.
+- An editor for the maintenance change.
+
+Recommended: VS Code + integrated terminal + GitHub browser. See [START-HERE.md](../START-HERE.md) for alternatives.
+
+## 📍 Where you work
+
+Create and push the tag from **your computer**. Create the Release and inspect repository maintenance from **GitHub**. Make the maintenance fix locally and submit it through a PR.
+
+
 ## 🎯 Objective
 
 Move a repository from merged work to a maintained release.

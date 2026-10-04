@@ -1,5 +1,17 @@
 # Mission 09 — Recover From a Mistake
 
+## 🧰 What you need
+
+- A local Git repository you can safely experiment in.
+- A terminal and editor. VS Code is recommended but not required.
+
+Use [START-HERE.md](../START-HERE.md) if you need help choosing your terminal or editor.
+
+## 📍 Where you work
+
+Make the harmless mistake and run the recovery command in **your local repository**. You can inspect the resulting history locally; GitHub is only needed when the mission specifically asks you to work with shared history.
+
+
 ## Goal
 
 Practice a safe undo on a harmless change.

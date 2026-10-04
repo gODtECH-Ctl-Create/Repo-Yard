@@ -10,6 +10,12 @@ The **repository is the classroom**. The website is only the front door and map.
 
 ## 🚀 Start learning
 
+### 🧰 Choose your tools
+
+New to Git or GitHub? Start with the [Tool & Setup Guide](START-HERE.md). It explains what each tool is, where to get it, and the different ways to work through the lessons.
+
+You can use **VS Code + terminal**, **VS Code Source Control**, or **another editor + terminal**. GitHub is used in your browser for collaboration tasks.
+
 Open the [Start a Repo Yard Journey](.github/ISSUE_TEMPLATE/start-journey.md) issue template, or comment:
 
 `/start`

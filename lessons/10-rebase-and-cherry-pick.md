@@ -1,5 +1,11 @@
 # Lesson 10 — Rebase and Cherry-pick
 
+## 🧰 Tools & alternatives
+
+See [START-HERE.md](../START-HERE.md) for setup links and tool choices. **Recommended:** VS Code + integrated terminal + GitHub in your browser. **Alternatives:** another editor with PowerShell, Command Prompt, Git Bash, macOS Terminal or Linux Terminal.
+
+When a step happens locally, use your terminal/editor. When a step happens on GitHub, use the browser.
+
 These are advanced history tools. Learn the mental model before memorizing commands.
 
 ## Before you start

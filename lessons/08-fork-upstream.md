@@ -1,5 +1,11 @@
 # Lesson 08 — Forks and Upstream
 
+## 🧰 Tools & alternatives
+
+See [START-HERE.md](../START-HERE.md) for setup links and tool choices. **Recommended:** VS Code + integrated terminal + GitHub in your browser. **Alternatives:** another editor with PowerShell, Command Prompt, Git Bash, macOS Terminal or Linux Terminal.
+
+When a step happens locally, use your terminal/editor. When a step happens on GitHub, use the browser.
+
 A **fork** is your GitHub copy of another repository. A **clone** is your local copy on your computer. You normally use both when contributing to a project you do not directly control.
 
 ## Before you start

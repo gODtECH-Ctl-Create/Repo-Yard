@@ -4,6 +4,19 @@
 
 ## 🎯 Objective
 
+## 🧰 What you need
+
+- Git installed on your computer.
+- A GitHub account.
+- A terminal and an editor. **VS Code + its integrated terminal** is recommended; PowerShell, Git Bash, Command Prompt or another editor also work.
+
+See [START-HERE.md](../START-HERE.md) for setup links and alternatives.
+
+## 📍 Where you work
+
+You start in a normal project folder on **your computer**, then clone Repo Yard into it. After cloning, open the new Repo-Yard folder in VS Code or your preferred editor.
+
+
 Get Repo Yard onto your computer and understand the relationship between your local clone and its remote.
 
 ## Do

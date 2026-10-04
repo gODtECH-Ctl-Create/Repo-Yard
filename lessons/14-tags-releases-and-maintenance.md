@@ -1,5 +1,11 @@
 # Lesson 14 — Tags, Releases, and Maintenance
 
+## 🧰 Tools & alternatives
+
+See [START-HERE.md](../START-HERE.md) for setup links and tool choices. **Recommended:** VS Code + integrated terminal + GitHub in your browser. **Alternatives:** another editor with PowerShell, Command Prompt, Git Bash, macOS Terminal or Linux Terminal.
+
+When a step happens locally, use your terminal/editor. When a step happens on GitHub, use the browser.
+
 A repository is not finished when code is merged. Someone still needs to identify versions, communicate changes and keep the project healthy.
 
 ## Before you start

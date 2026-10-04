@@ -1,5 +1,18 @@
 # Mission 08 — Fork and Upstream
 
+## 🧰 What you need
+
+- A GitHub account and browser.
+- Git installed locally.
+- A terminal and editor. Recommended: VS Code + integrated terminal.
+
+See [START-HERE.md](../START-HERE.md) for PowerShell, Command Prompt, Git Bash, macOS/Linux Terminal and editor alternatives.
+
+## 📍 Where you work
+
+Create your fork on **GitHub**, clone that fork to **your computer**, and do the Git remote/branch work in your local repository. The final Pull Request is created in your GitHub browser.
+
+
 ## Goal
 
 Learn the public-contributor workflow.

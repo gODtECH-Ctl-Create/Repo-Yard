@@ -1,5 +1,18 @@
 # Mission 10 — History Surgery
 
+## 🧰 What you need
+
+- A disposable local Git branch.
+- Git installed.
+- A terminal and editor. Recommended: VS Code + integrated terminal.
+
+See [START-HERE.md](../START-HERE.md) for alternatives.
+
+## 📍 Where you work
+
+Create and inspect the practice history in **your local repository**. Use the terminal for rebase/cherry-pick and your editor when resolving conflicts. Do not experiment on an important shared branch.
+
+
 ## 🎯 Objective
 
 Control commit history safely with rebase and cherry-pick.

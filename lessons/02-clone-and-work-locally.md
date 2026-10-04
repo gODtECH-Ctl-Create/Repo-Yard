@@ -1,5 +1,11 @@
 # 💻 Lesson 02: Clone and Work Locally
 
+
+## 🧰 Tools & alternatives
+
+See [START-HERE.md](../START-HERE.md) for setup links and tool choices. **Recommended:** VS Code + integrated terminal + GitHub in your browser. **Alternatives:** another editor with PowerShell, Command Prompt, Git Bash, macOS Terminal or Linux Terminal.
+
+Use Git commands in a terminal when the lesson shows commands. Use GitHub in the browser when the lesson says to open a repository, Issue or Pull Request.
 Most real development happens on your computer. In this lesson, you will open the repository, create a safe branch, make a change and understand where that change lives.
 
 ## Before you start

@@ -1,5 +1,11 @@
 # Lesson 06 — Reviews and PR Updates
 
+
+## 🧰 Tools & alternatives
+
+See [START-HERE.md](../START-HERE.md) for setup links and tool choices. **Recommended:** VS Code + integrated terminal + GitHub in your browser. **Alternatives:** another editor with PowerShell, Command Prompt, Git Bash, macOS Terminal or Linux Terminal.
+
+Use Git commands in a terminal when the lesson shows commands. Use GitHub in the browser when the lesson says to open a repository, Issue or Pull Request.
 Code review is a conversation about a proposed change. The reviewer is checking whether the change is correct, understandable and safe enough to merge.
 
 ## Before you start

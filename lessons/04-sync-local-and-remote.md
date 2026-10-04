@@ -1,5 +1,11 @@
 # Lesson 04 — Pull, Push, and Sync
 
+
+## 🧰 Tools & alternatives
+
+See [START-HERE.md](../START-HERE.md) for setup links and tool choices. **Recommended:** VS Code + integrated terminal + GitHub in your browser. **Alternatives:** another editor with PowerShell, Command Prompt, Git Bash, macOS Terminal or Linux Terminal.
+
+Use Git commands in a terminal when the lesson shows commands. Use GitHub in the browser when the lesson says to open a repository, Issue or Pull Request.
 Git does not automatically synchronize your computer with GitHub. You choose when information moves and in which direction.
 
 ## Before you start

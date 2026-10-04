@@ -4,6 +4,21 @@
 
 ## 🎯 Scenario
 
+## 🧰 What you need
+
+- A safe practice repository or challenge environment.
+- A GitHub account with the permissions needed for the scenario.
+- Git installed locally.
+- An editor. VS Code is recommended.
+- A browser for Issues, PRs, Actions, reviews and Releases.
+
+See [START-HERE.md](../START-HERE.md) for terminal and editor alternatives.
+
+## 📍 Where you work
+
+This is intentionally split across **your computer and GitHub**. Diagnose and fix Git problems locally; use GitHub for the Issue, Pull Request, review, checks, protection rules and Release.
+
+
 You are maintaining a repository under pressure. A Pull Request is behind `main`, CI is failing, a review is requested, and the branch conflicts with `main`. The repository has protection rules, so you cannot simply push to `main`. Once the PR is healthy, you must ship a release.
 
 ## 📋 Mission

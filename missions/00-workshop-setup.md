@@ -4,6 +4,20 @@
 
 ## 🎯 Objective
 
+## 🧰 What you need
+
+- A GitHub account: https://github.com/
+- Git installed: https://git-scm.com/downloads
+- A terminal: VS Code's integrated terminal (recommended), PowerShell, Command Prompt, Git Bash, Terminal or your Linux terminal.
+- An editor: VS Code is recommended, but another editor is fine.
+
+Read the [Tool & Setup Guide](../START-HERE.md) before starting if any of these are unfamiliar.
+
+## 📍 Where you work
+
+This mission is mainly on **your computer**. Use Git in your terminal. GitHub is used to create or verify your account and authentication.
+
+
 Make sure your Git and GitHub workshop actually works before you start the course.
 
 ## Do

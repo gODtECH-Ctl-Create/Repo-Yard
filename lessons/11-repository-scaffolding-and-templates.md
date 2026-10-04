@@ -1,5 +1,11 @@
 # Lesson 11 — Repository Scaffolding and Templates
 
+## 🧰 Tools & alternatives
+
+See [START-HERE.md](../START-HERE.md) for setup links and tool choices. **Recommended:** VS Code + integrated terminal + GitHub in your browser. **Alternatives:** another editor with PowerShell, Command Prompt, Git Bash, macOS Terminal or Linux Terminal.
+
+When a step happens locally, use your terminal/editor. When a step happens on GitHub, use the browser.
+
 A professional repository is more than source code. It also contains the instructions and structures that help people understand, contribute to and operate the project.
 
 ## Before you start

@@ -1,5 +1,11 @@
 # Lesson 13 — Branch Protection and CODEOWNERS
 
+## 🧰 Tools & alternatives
+
+See [START-HERE.md](../START-HERE.md) for setup links and tool choices. **Recommended:** VS Code + integrated terminal + GitHub in your browser. **Alternatives:** another editor with PowerShell, Command Prompt, Git Bash, macOS Terminal or Linux Terminal.
+
+When a step happens locally, use your terminal/editor. When a step happens on GitHub, use the browser.
+
 A shared repository needs rules that protect important branches and route work to the right people.
 
 ## Before you start

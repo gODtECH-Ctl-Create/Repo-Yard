@@ -2,6 +2,20 @@
 
 ## Goal
 
+## 🧰 What you need
+
+- Git and a local repository.
+- A safe practice branch.
+- A second branch or learning partner to create the competing change.
+- An editor that can show conflict markers. VS Code is recommended, but another code editor works.
+
+See [START-HERE.md](../START-HERE.md) for terminal/editor alternatives.
+
+## 📍 Where you work
+
+The conflict is created and resolved in **your local repository**. GitHub can host the branches, but the actual conflict-resolution commands happen in your terminal and editor.
+
+
 Resolve an intentional merge conflict without panicking.
 
 ## Setup

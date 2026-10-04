@@ -2,6 +2,19 @@
 
 ## 🎯 Objective
 
+## 🧰 What you need
+
+- A GitHub account and browser.
+- A branch with a pushed commit.
+- A terminal + editor for any follow-up changes.
+
+Recommended setup: **VS Code + integrated terminal + GitHub in your browser**. See [START-HERE.md](../START-HERE.md) for alternatives.
+
+## 📍 Where you work
+
+Create and review the Pull Request on **GitHub in your browser**. Create or update the code on **your computer** and push those changes with Git.
+
+
 Create a real PR from a feature branch and give a reviewer enough context to work with you.
 
 ## Scenario
