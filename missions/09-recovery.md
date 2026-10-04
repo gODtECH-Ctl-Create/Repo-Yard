@@ -2,16 +2,18 @@
 
 ## Goal
 
-Practice safe recovery on a throwaway branch.
+Practice a safe undo on a harmless change.
 
-## Unstage
+Choose one:
+
+### Unstage
 
 ```bash
 git add <file>
 git restore --staged <file>
 ```
 
-## Restore a local edit
+### Restore a local edit
 
 Make a harmless edit, inspect it, then:
 
@@ -19,29 +21,7 @@ Make a harmless edit, inspect it, then:
 git restore <file>
 ```
 
-## Practice reset
-
-On a branch created only for this mission:
-
-```bash
-git reset --soft HEAD~1
-```
-
-Inspect:
-
-```bash
-git status
-```
-
-The commit moved back, but the changes remain staged.
-
-You can return them to a normal commit with:
-
-```bash
-git commit -m "docs: restore practice commit"
-```
-
-## Revert a test commit
+### Revert a test commit
 
 Create a harmless commit, then:
 
@@ -49,12 +29,4 @@ Create a harmless commit, then:
 git revert <commit-sha>
 ```
 
-## ⚠️ Do not use hard reset on valuable work
-
-```bash
-git reset --hard
-```
-
-can discard changes. The mission does not require it.
-
-**Success condition:** recover a harmless mistake and explain the difference between restore, reset, and revert.
+**Success condition:** explain where the change was and why the selected command was appropriate.
