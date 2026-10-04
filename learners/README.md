@@ -1,13 +1,17 @@
 # 👋 Repo Yard Learners
 
-This directory is used for learner profiles during practice missions.
+Repo Yard uses GitHub itself as the learner control surface.
 
-Create your own profile only when a mission tells you to.
+## Your first step
 
-Example:
+Open the [Start a Repo Yard Journey](../.github/ISSUE_TEMPLATE/start-journey.md) issue template, or comment `/start` on a Repo Yard issue.
 
-```text
-learners/your-github-username.md
-```
+RYOS creates one personal Journey Issue:
+
+`[Learner] @your-github-username — Journey`
+
+That Journey records your current mission, progress, XP, badges, evidence and next action.
+
+A local learner passport is available for missions that explicitly ask for one: [learner-template.md](learner-template.md).
 
 Only publish information you are comfortable making public.
