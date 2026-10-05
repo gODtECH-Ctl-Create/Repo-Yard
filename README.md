@@ -9,18 +9,17 @@
   <img src="https://img.shields.io/badge/LESSONS-14-2dff83?style=for-the-badge&labelColor=07101a" alt="14 lessons" />
   <img src="https://img.shields.io/badge/MISSIONS-16-4da3ff?style=for-the-badge&labelColor=07101a" alt="16 missions" />
   <img src="https://img.shields.io/badge/RYOS-GITHUB--NATIVE-a67cff?style=for-the-badge&labelColor=07101a" alt="RYOS GitHub native" />
-  <img src="https://img.shields.io/badge/LEVEL-BEGINNER%20→%20TEAM--READY-ff6bcb?style=for-the-badge&labelColor=07101a" alt="Beginner to Team Ready" />
 </p>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=19&duration=2400&pause=650&color=2DFF83&center=true&vCenter=true&width=1000&lines=Stop+memorising+Git.+Start+using+it.;Learn+Git+by+working+in+a+real+repository.;Issues+→+Branches+→+Commits+→+PRs+→+Reviews+→+Merge;Break+things.+Fix+them.+Understand+why.;Learn+→+Prove+→+Earn+→+Advance." alt="Animated Repo Yard messaging" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=19&duration=2400&pause=650&color=2DFF83&center=true&vCenter=true&width=1000&lines=Stop+memorising+Git.+Start+using+it.;Learn+Git+inside+a+real+repository.;Issues+%E2%86%92+Branches+%E2%86%92+Commits+%E2%86%92+PRs;Break+things.+Fix+them.+Understand+why.;Learn+%E2%86%92+Prove+%E2%86%92+Earn+%E2%86%92+Advance." alt="Animated Repo Yard messaging" />
 
 <p>
   <a href="#-what-is-repo-yard">What is Repo Yard?</a> ·
   <a href="#-how-it-works">How it works</a> ·
-  <a href="#-the-yard-journey">The journey</a> ·
-  <a href="#-tools-you-can-use">Tools</a> ·
+  <a href="#-the-yard-journey">Journey</a> ·
+  <a href="#-tools">Tools</a> ·
   <a href="#-achievements">Achievements</a> ·
-  <a href="#-start-now">Start</a>
+  <a href="#-start">Start</a>
 </p>
 
 </div>
@@ -31,279 +30,95 @@
 
 **Repo Yard is a hands-on Git and GitHub learning ground where the repository itself is the classroom.**
 
-It is designed for the person who sees a command like `git push` and thinks:
+You do not learn by memorising commands from a page. You learn by using Git on your computer and GitHub in the browser, with short lessons followed by real missions.
 
-> “Okay... but what is happening, where am I supposed to do this, and how do I know I did it correctly?”
-
-Repo Yard answers those questions before asking the learner to perform the task.
-
-You learn a concept, see where the work happens, choose a tool, perform the real workflow, produce evidence, receive feedback, and move to the next mission.
+> **Learn the idea → do the work → prove it → move forward.**
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/gODtECH-Ctl-Create/Repo-Yard/main/assets/repo-yard-loop.svg" alt="Animated Repo Yard learning loop" width="95%" />
+  <img src="https://raw.githubusercontent.com/gODtECH-Ctl-Create/Repo-Yard/main/assets/repo-yard-loop.svg" alt="Animated Repo Yard learning loop" width="90%" />
 </div>
 
-### The core idea
+### The simple model
 
-```text
-LESSON
-  ↓
-Understand the idea
-  ↓
-MISSION
-  ↓
-Do the work for real
-  ↓
-GITHUB EVIDENCE
-  ↓
-RYOS VERIFICATION
-  ↓
-XP + ACHIEVEMENT
-  ↓
-NEXT MISSION
-```
-
-### What makes it different
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### 📚 Learn
-
-Short explanations define the unfamiliar terms first.
-
-You are told **what something is**, **why it matters**, and **where it lives**.
-
-</td>
-<td width="33%" valign="top">
-
-### 🛠️ Practice
-
-You use your own computer and real Git/GitHub workflows.
-
-No fake terminal. No pretend Pull Requests. No simulated Git.
-
-</td>
-<td width="33%" valign="top">
-
-### 🏆 Prove
-
-Your GitHub activity becomes part of the learning evidence.
-
-RYOS keeps your journey, progress, XP and achievements organised.
-
-</td>
-</tr>
-</table>
+| Learn | Do | Prove |
+| --- | --- | --- |
+| Understand the concept | Work in Git, VS Code and GitHub | Use real repository evidence |
+| Get the context first | Create branches, commits, PRs and reviews | RYOS tracks the learner journey |
+| Know what the tool is for | Break things safely and recover | Earn XP and achievement eligibility |
 
 ---
 
 ## 🧭 How it works
 
-Repo Yard is deliberately split between the tools that do different jobs.
+```text
+START
+  ↓
+Your Journey
+  ↓
+Lesson
+  ↓
+Mission
+  ↓
+Real Git + GitHub work
+  ↓
+Evidence
+  ↓
+RYOS
+  ↓
+Next mission
+```
 
-| Tool | What you use it for |
-| --- | --- |
-| **Git** | Version control on your computer |
-| **GitHub** | Remote repositories, Issues, Pull Requests, reviews, Actions and Releases |
-| **VS Code** | Recommended editor and visual Git workspace |
-| **Terminal** | Run Git commands |
-| **RYOS** | Learner Journey, evidence, progress, XP and badges |
-| **Repo Yard website** | Front door, orientation and visual map |
+### 🎒 Your Journey
 
-You are never required to use VS Code. You can use another editor and terminal.
-
-The recommended beginner combination is:
-
-**VS Code + integrated terminal + Git + GitHub in your browser**
-
-See **[START-HERE.md](START-HERE.md)** for installation links and alternatives for Windows, macOS and Linux.
-
----
-
-## 🎒 Your personal learning control center
-
-Repo Yard is built for many people learning at the same time.
-
-That is why every learner gets a personal GitHub **Journey Issue**:
+When many people learn at once, each person gets a personal GitHub Issue:
 
 `[Learner] @your-username — Journey`
 
-Your Journey tells you:
+It keeps your current mission, completed work, XP, badges, evidence and next step in one place.
 
-- what mission you are on;
-- what you have completed;
-- how much XP you have;
-- which achievements are available;
-- what evidence you have produced;
-- what to do next.
-
-Start one from GitHub using the **Start a Repo Yard Journey** Issue template or the `/start` command.
-
-Read [RYOS.md](RYOS.md) to understand the operations system behind it.
+Start with the **[Start a Repo Yard Journey](.github/ISSUE_TEMPLATE/start-journey.md)** template or comment `/start`.
 
 ---
 
 ## 🗺️ The Yard journey
 
-There are **14 lessons and 16 hands-on missions**.
+**14 lessons · 16 missions · Beginner → Team Ready**
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/gODtECH-Ctl-Create/Repo-Yard/main/assets/repo-yard-journey.svg" alt="Animated Repo Yard 16-mission journey" width="100%" />
+  <img src="https://raw.githubusercontent.com/gODtECH-Ctl-Create/Repo-Yard/main/assets/repo-yard-journey.svg" alt="Animated Repo Yard mission journey" width="100%" />
 </div>
 
-### 🟢 Gate 1 — Git Basics Complete
+| Stage | Missions | Outcome |
+| --- | --- | --- |
+| 🟢 Git Basics | M00–M04 | Work safely with Git locally |
+| 🔵 Contributor | M05–M08 | Collaborate through GitHub |
+| 🟠 Problem Solver | M09–M11 | Recover and control repository history |
+| 🔴 Repository Engineer | M12–M14 | Automate, protect and ship |
+| ⚫ Team Ready | M15 | Operate a repository under pressure |
 
-**M00 → M04**
-
-You can safely work with Git locally.
-
-### 🔵 Gate 2 — Contributor Ready
-
-**M05 → M08**
-
-You can work with a real GitHub collaboration workflow.
-
-### 🟠 Gate 3 — Problem Solver
-
-**M09 → M11**
-
-You can recover from mistakes, control history and understand repository structure.
-
-### 🔴 Gate 4 — Repository Engineer
-
-**M12 → M14**
-
-You understand automation, governance, releases and maintenance.
-
-### ⚫ Final — Team Ready
-
-**M15**
-
-You can operate a repository under realistic pressure rather than simply remembering commands.
-
-See the complete [COURSE.md](COURSE.md) and machine-readable [course.json](course.json).
+See the [course map](COURSE.md).
 
 ---
 
-## 🧪 What you actually practice
+## 🧰 Tools
 
-Repo Yard moves through the same workflow real teams use:
+You do not need a special setup.
 
-```text
-Issue
-  ↓
-Branch
-  ↓
-Local work
-  ↓
-Commit
-  ↓
-Push
-  ↓
-Pull Request
-  ↓
-Checks
-  ↓
-Review
-  ↓
-Fix
-  ↓
-Merge
-  ↓
-Tag
-  ↓
-Release
-  ↓
-Maintenance
-```
+**Recommended:**  
+Git + VS Code + VS Code integrated terminal + GitHub in your browser.
 
-And then we deliberately make things harder:
+**Also supported:**  
+PowerShell · Command Prompt · Git Bash · macOS Terminal · Linux Terminal · another editor.
 
-```text
-wrong branch
-   ↓
-confusing state
-   ↓
-conflict
-   ↓
-failed check
-   ↓
-recovery
-   ↓
-understanding
-```
+Use the computer for local Git work. Use GitHub for Issues, Pull Requests, reviews, Actions, Releases and repository settings.
 
-The goal is not to avoid every problem.
-
-The goal is to become the person who can **understand the problem and recover safely**.
-
----
-
-## 🧰 Tools you can use
-
-### Recommended setup
-
-```text
-GitHub account
-      +
-Git
-      +
-VS Code
-      +
-VS Code integrated terminal
-      +
-GitHub in your browser
-```
-
-### Other valid choices
-
-**Windows**
-
-PowerShell · Command Prompt · Git Bash · VS Code integrated terminal
-
-**macOS**
-
-Terminal · VS Code integrated terminal · your preferred editor
-
-**Linux**
-
-Your normal terminal · VS Code integrated terminal · your preferred editor
-
-### Browser-based GitHub work
-
-Some tasks naturally belong on GitHub:
-
-- creating Issues;
-- opening Pull Requests;
-- reviewing PRs;
-- looking at Actions;
-- creating Releases;
-- changing repository settings.
-
-Some tasks should remain local because that is what you are learning:
-
-- checking Git state;
-- creating and switching branches;
-- staging;
-- committing;
-- merging/rebasing;
-- recovering local work.
-
-Repo Yard explains which side of the boundary each task belongs to.
-
-See **[START-HERE.md](START-HERE.md)**.
+**[START-HERE.md →](START-HERE.md)** explains what each tool is, where to get it, and which route to use.
 
 ---
 
 ## 🏆 Achievements
 
-Repo Yard is not just “read some Markdown and leave.”
-
-As you complete the mission path, RYOS can track achievement eligibility.
-
-Current achievement path:
+The learning path has achievement milestones:
 
 | Achievement | Requirement |
 | --- | --- |
@@ -313,200 +128,85 @@ Current achievement path:
 | 🧰 **Repository Engineer** | M11–M14 |
 | ⚫ **Team Ready** | M00–M15 + final challenge |
 
-The intended loop is:
+The goal is simple:
 
-```text
-LEARN
-  ↓
-PROVE
-  ↓
-EARN
-  ↓
-SHARE
-  ↓
-SOMEONE ELSE DISCOVERS REPO YARD
-  ↓
-LEARN
-```
+`Learn → Prove → Earn → Share`
 
-See [achievements/README.md](achievements/README.md).
+See [achievements](achievements/README.md).
 
 ---
 
-## 🤖 RYOS — Repo Yard Operations System
+## 🤖 RYOS
 
-RYOS is the learning operations layer built specifically for Repo Yard.
+**Repo Yard Operations System** is the learning operations layer built specifically for this repository.
 
-It does **not** teach the lesson for you.
+It handles:
 
-It coordinates:
-
-- learner identity;
-- Journey Issues;
+- learner Journeys;
 - mission signals;
-- GitHub evidence;
-- progress;
-- XP;
+- GitHub-visible evidence;
+- progress and XP;
 - badge requests;
-- achievement checks;
 - next-action guidance.
 
-The important boundary is:
+RYOS does not replace the learning. It keeps the learning organised.
 
 > **The repository is the classroom. GitHub is the control surface. RYOS coordinates the experience.**
 
-RYOS also follows an evidence rule:
-
-**It never claims GitHub verified something that GitHub could not actually observe.**
-
-For example, your local `git reflog` work may require a self-check, while a Pull Request or Release can provide GitHub-visible evidence.
+Read [RYOS.md](RYOS.md).
 
 ---
 
-## 🧠 The Repo Yard philosophy
+## 🚀 Start
 
-> **Learn the idea. Use the tool. Break something safely. Fix it. Explain what happened. Move forward.**
+### 1. Set up your tools
 
-The course is designed around a simple learning loop:
-
-```text
-LEARN → THINK → DO → BREAK → FIX → PROVE → VERIFY → WIN → UNLOCK → NEXT
-```
-
-You are not trying to become good at remembering Git commands.
-
-You are becoming comfortable with **repository state, collaboration, failure, recovery and shipping**.
-
----
-
-## 📖 Course structure
-
-### Foundation
-
-- [M00 — Workshop Setup](missions/00-workshop-setup.md)
-- [M01 — Clone the Yard](missions/01-clone-the-yard.md)
-- [M02 — Branch, Commit and Push](missions/02-branch-commit-push.md)
-- [M03 — Branch Control](missions/03-branch-control.md)
-- [M04 — Sync](missions/04-sync.md)
-
-### Collaboration
-
-- [M05 — First Pull Request](missions/05-first-pull-request.md)
-- [M06 — Review and Update](missions/06-review-and-update.md)
-- [M07 — Conflict Lab](missions/07-conflict-lab.md)
-- [M08 — Fork and Upstream](missions/08-fork-upstream.md)
-
-### Problem Solving
-
-- [M09 — Recovery](missions/09-recovery.md)
-- [M10 — History Surgery](missions/10-release.md)
-- [M11 — Repository Blueprint](missions/11-actions-and-protection.md)
-
-### Repository Engineering
-
-- [M12 — GitHub Actions](missions/12-github-actions.md)
-- [M13 — Branch Protection and CODEOWNERS](missions/13-branch-protection-and-codeowners.md)
-- [M14 — Ship and Maintain](missions/14-release-and-maintenance.md)
-- [M15 — Maintainer Challenge](missions/15-maintainer-challenge.md)
-
-Lessons explain the ideas behind the work. Missions make you perform them.
-
----
-
-## 🛡️ What Repo Yard is not
-
-Repo Yard is **not**:
-
-- a fake Git terminal in a browser;
-- a passive Git command glossary;
-- a progress dashboard disconnected from GitHub;
-- a website where you click buttons to “pretend” to collaborate.
-
-The website is the **front door and map**.
-
-The actual learning happens in Git, on your computer, and on GitHub.
-
----
-
-## 🚀 Start now
-
-### 1. Read the setup guide
-
-**[START-HERE.md →](START-HERE.md)**
-
-Understand the tools and choose your setup.
+**[START-HERE.md](START-HERE.md)**
 
 ### 2. Start your Journey
 
-Open the **Start a Repo Yard Journey** Issue template on GitHub, or comment:
+Open the Journey issue template or comment:
 
 ```text
 /start
 ```
 
-### 3. Open Mission 00
+### 3. Begin Mission 00
 
 **[Set Up Your Git Workshop →](missions/00-workshop-setup.md)**
 
-### 4. Do the work
+### 4. Keep working
 
-Use your computer, Git, VS Code/your editor and GitHub.
-
-### 5. Keep going
-
-Your Journey tells you what comes next.
+Follow your Journey. Do the missions on your computer and on GitHub.
 
 <div align="center">
 
 <a href="https://github.com/gODtECH-Ctl-Create/Repo-Yard/issues/new/choose"><img src="https://img.shields.io/badge/START%20YOUR%20JOURNEY-2dff83?style=for-the-badge&labelColor=07101a" alt="Start your Repo Yard journey" /></a>
-<a href="https://github.com/gODtECH-Ctl-Create/Repo-Yard/blob/main/START-HERE.md"><img src="https://img.shields.io/badge/READ%20START--HERE-4da3ff?style=for-the-badge&labelColor=07101a" alt="Read the setup guide" /></a>
-<a href="https://godtech-ctl-create.github.io/Repo-Yard/"><img src="https://img.shields.io/badge/OPEN%20THE%20WEBSITE-a67cff?style=for-the-badge&labelColor=07101a" alt="Open Repo Yard website" /></a>
+<a href="https://godtech-ctl-create.github.io/Repo-Yard/"><img src="https://img.shields.io/badge/WEBSITE-a67cff?style=for-the-badge&labelColor=07101a" alt="Repo Yard website" /></a>
 
 </div>
 
 ---
 
-## 🤝 Contributing to the Yard
+## 🤝 Contributing
 
-Repo Yard is itself a real repository.
-
-That means contributors practice the same workflow learners are being taught:
+Repo Yard is itself a real GitHub repository, so contributions follow the same workflow learners practice:
 
 `Issue → Branch → Commit → Push → PR → Review → Merge`
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) before making changes.
-
-Good contributions can improve:
-
-- lessons;
-- missions;
-- examples;
-- troubleshooting;
-- tooling guidance;
-- achievement definitions;
-- the RYOS operations layer.
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
 ## 🔐 Safety
 
-Never put these into Issues, commits, screenshots or public files:
-
-**passwords · API keys · access tokens · private keys · secrets**
-
-When a mission asks you to experiment, use a safe practice branch or practice repository.
+Never put **passwords, API keys, access tokens, private keys or other secrets** into Issues, commits, screenshots or public files.
 
 ---
 
-## 🌍 From Nigeria to everywhere
-
-Repo Yard is built with a Nigerian developer spirit and designed for anyone who wants to become comfortable working in real Git and GitHub repositories.
-
-**Real skills. Real repositories. Real collaboration.**
-
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/gODtECH-Ctl-Create/Repo-Yard/main/assets/repo-yard-loop.svg" alt="Repo Yard animated learning loop" width="85%" />
+**Real skills. Real repositories. Real collaboration.**
 
 <p><a href="#readme-top">↑ back to top</a></p>
 
