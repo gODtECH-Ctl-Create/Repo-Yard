@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 250" role="img" aria-labelledby="title desc">
+<title id="title">Repo Yard learning loop</title><desc id="desc">Learn, try, verify, complete, celebrate, unlock and advance.</desc>
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#2dff83"/><stop offset=".5" stop-color="#4da3ff"/><stop offset="1" stop-color="#ff6bcb"/></linearGradient><style>.dash{stroke-dasharray:8 8;animation:move 2.8s linear infinite}.float{animation:up 2.4s ease-in-out infinite}@keyframes move{to{stroke-dashoffset:-32}}@keyframes up{50%{transform:translateY(-4px)}}@media(prefers-reduced-motion:reduce){.dash,.float{animation:none}}</style></defs>
+<rect width="1100" height="250" rx="24" fill="#07101a"/><rect x="12" y="12" width="1076" height="226" rx="18" fill="none" stroke="#24354d"/>
+<path d="M85 115 H1015" stroke="url(#g)" stroke-width="4" fill="none" class="dash"/>
+<g font-family="Inter,Arial,sans-serif" text-anchor="middle">
+<g class="float"><circle cx="85" cy="115" r="40" fill="#0e2418" stroke="#2dff83" stroke-width="4"/><text x="85" y="111" fill="#fff" font-size="14" font-weight="700">LEARN</text><text x="85" y="132" fill="#92a1b4" font-size="11">understand</text></g>
+<g class="float" style="animation-delay:.2s"><circle cx="271" cy="115" r="40" fill="#102039" stroke="#4da3ff" stroke-width="4"/><text x="271" y="111" fill="#fff" font-size="14" font-weight="700">TRY</text><text x="271" y="132" fill="#92a1b4" font-size="11">use Git</text></g>
+<g class="float" style="animation-delay:.4s"><circle cx="457" cy="115" r="40" fill="#211735" stroke="#a67cff" stroke-width="4"/><text x="457" y="111" fill="#fff" font-size="14" font-weight="700">VERIFY</text><text x="457" y="132" fill="#92a1b4" font-size="11">show evidence</text></g>
+<g class="float" style="animation-delay:.6s"><circle cx="643" cy="115" r="40" fill="#33230e" stroke="#ffb84d" stroke-width="4"/><text x="643" y="111" fill="#fff" font-size="14" font-weight="700">COMPLETE</text><text x="643" y="132" fill="#92a1b4" font-size="11">mission done</text></g>
+<g class="float" style="animation-delay:.8s"><circle cx="829" cy="115" r="40" fill="#34162d" stroke="#ff6bcb" stroke-width="4"/><text x="829" y="111" fill="#fff" font-size="14" font-weight="700">CELEBRATE</text><text x="829" y="132" fill="#92a1b4" font-size="11">XP + badge</text></g>
+<g class="float" style="animation-delay:1s"><circle cx="1015" cy="115" r="40" fill="#0e292d" stroke="#49e3e5" stroke-width="4"/><text x="1015" y="111" fill="#fff" font-size="14" font-weight="700">ADVANCE</text><text x="1015" y="132" fill="#92a1b4" font-size="11">next mission</text></g>
+</g>
+<text x="550" y="205" fill="#6fe8a8" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" text-anchor="middle" font-size="15">Learn → Try → Verify → Complete → Celebrate → Unlock → Advance</text>
+</svg>
