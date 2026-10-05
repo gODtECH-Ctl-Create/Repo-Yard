@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="t d">
+<title id="t">How a Repo Yard lesson works</title><desc id="d">A simple animated storyboard showing concept, where, steps, practice, proof and next mission.</desc>
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#2dff83"/><stop offset=".35" stop-color="#4da3ff"/><stop offset=".7" stop-color="#a67cff"/><stop offset="1" stop-color="#ff6bcb"/></linearGradient><style>.dash{stroke-dasharray:10 10;animation:d 3s linear infinite}.card{animation:f 3.4s ease-in-out infinite}@keyframes d{to{stroke-dashoffset:-40}}@keyframes f{50%{transform:translateY(-4px)}}@media(prefers-reduced-motion:reduce){.dash,.card{animation:none}}</style></defs>
+<rect width="1200" height="320" rx="26" fill="#07101a"/><rect x="14" y="14" width="1172" height="292" rx="20" fill="none" stroke="#24354d"/>
+<text x="42" y="48" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="23" font-weight="800">A lesson is a guided path, not a wall of commands.</text>
+<text x="42" y="72" fill="#93a3b7" font-family="Inter,Arial,sans-serif" font-size="14">Every step answers one beginner question before asking for action.</text>
+<path d="M85 160 H1115" stroke="#1d2a3d" stroke-width="6"/><path d="M85 160 H1115" stroke="url(#g)" stroke-width="4" class="dash"/>
+<g font-family="Inter,Arial,sans-serif" text-anchor="middle">
+ <g class="card"><circle cx="85" cy="160" r="43" fill="#10251a" stroke="#2dff83" stroke-width="3"/><text x="85" y="155" fill="#fff" font-size="15" font-weight="800">1. WHAT?</text><text x="85" y="177" fill="#91a3b8" font-size="11">concept</text></g>
+ <g class="card" style="animation-delay:.2s"><circle cx="291" cy="160" r="43" fill="#10223a" stroke="#4da3ff" stroke-width="3"/><text x="291" y="155" fill="#fff" font-size="15" font-weight="800">2. WHERE?</text><text x="291" y="177" fill="#91a3b8" font-size="11">tool + place</text></g>
+ <g class="card" style="animation-delay:.4s"><circle cx="497" cy="160" r="43" fill="#211937" stroke="#a67cff" stroke-width="3"/><text x="497" y="155" fill="#fff" font-size="15" font-weight="800">3. DO</text><text x="497" y="177" fill="#91a3b8" font-size="11">small steps</text></g>
+ <g class="card" style="animation-delay:.6s"><circle cx="703" cy="160" r="43" fill="#35250f" stroke="#ffb84d" stroke-width="3"/><text x="703" y="155" fill="#fff" font-size="15" font-weight="800">4. PRACTICE</text><text x="703" y="177" fill="#91a3b8" font-size="11">real Git</text></g>
+ <g class="card" style="animation-delay:.8s"><circle cx="909" cy="160" r="43" fill="#33162d" stroke="#ff6bcb" stroke-width="3"/><text x="909" y="155" fill="#fff" font-size="15" font-weight="800">5. PROVE</text><text x="909" y="177" fill="#91a3b8" font-size="11">evidence</text></g>
+ <g class="card" style="animation-delay:1s"><circle cx="1115" cy="160" r="43" fill="#0d2930" stroke="#49e3e5" stroke-width="3"/><text x="1115" y="155" fill="#fff" font-size="15" font-weight="800">6. NEXT</text><text x="1115" y="177" fill="#91a3b8" font-size="11">new mission</text></g>
+</g>
+<text x="600" y="255" fill="#76e8aa" font-family="ui-monospace,Consolas,monospace" font-size="14" text-anchor="middle">You should never have to guess where to click, what to run, or what “done” means.</text>
+</svg>

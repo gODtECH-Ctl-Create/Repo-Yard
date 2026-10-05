@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="t d">
+<title id="t">Repo Yard — learn Git by doing</title><desc id="d">A calm dark illustration of a learner using VS Code and GitHub with a simple Repo Yard message.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#050914"/><stop offset=".58" stop-color="#081424"/><stop offset="1" stop-color="#07130f"/></linearGradient>
+ <linearGradient id="accent" x1="0" x2="1"><stop stop-color="#2dff83"/><stop offset=".55" stop-color="#4da3ff"/><stop offset="1" stop-color="#ff6bcb"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
+ <style>
+ .float{animation:f 4s ease-in-out infinite}.pulse{animation:p 2.6s ease-in-out infinite}.dash{stroke-dasharray:9 9;animation:d 3.3s linear infinite}
+ @keyframes f{50%{transform:translateY(-6px)}} @keyframes p{50%{opacity:.95;filter:drop-shadow(0 0 10px #2dff83)}} @keyframes d{to{stroke-dashoffset:-36}}
+ @media(prefers-reduced-motion:reduce){.float,.pulse,.dash{animation:none}}
+ </style>
+</defs>
+<rect width="1200" height="420" rx="30" fill="url(#bg)"/>
+<circle cx="1040" cy="110" r="120" fill="#2dff83" opacity=".12" filter="url(#blur)"/>
+<circle cx="250" cy="300" r="100" fill="#4da3ff" opacity=".1" filter="url(#blur)"/>
+<rect x="18" y="18" width="1164" height="384" rx="24" fill="none" stroke="url(#accent)" opacity=".35"/>
+<g transform="translate(54 62)">
+ <text x="0" y="18" fill="#7beeb0" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700">GIT + GITHUB, LEARNED BY DOING</text>
+ <text x="0" y="72" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="44" font-weight="850">Welcome to <tspan fill="#2dff83">Repo Yard</tspan>.</text>
+ <text x="0" y="112" fill="#b5c0d1" font-family="Inter,Arial,sans-serif" font-size="20">Read a little. Do the work. See what happens.</text>
+ <g class="pulse" transform="translate(0 148)">
+  <rect width="210" height="42" rx="21" fill="#0f2118" stroke="#2dff83"/>
+  <text x="105" y="27" fill="#eafff2" font-family="Inter,Arial,sans-serif" font-size="15" text-anchor="middle" font-weight="700">Start with one mission →</text>
+ </g>
+</g>
+<g class="float" transform="translate(680 42)">
+ <ellipse cx="235" cy="320" rx="220" ry="26" fill="#000" opacity=".28"/>
+ <rect x="36" y="74" width="420" height="230" rx="18" fill="#0d1827" stroke="#31445c" stroke-width="2"/>
+ <rect x="55" y="94" width="382" height="166" rx="10" fill="#07101a"/>
+ <circle cx="74" cy="112" r="5" fill="#ff5f57"/><circle cx="92" cy="112" r="5" fill="#febc2e"/><circle cx="110" cy="112" r="5" fill="#28c840"/>
+ <text x="76" y="143" fill="#76f2ac" font-family="ui-monospace,Consolas,monospace" font-size="14">$ git status</text>
+ <text x="76" y="169" fill="#8ea0b8" font-family="ui-monospace,Consolas,monospace" font-size="14">On branch feat/my-change</text>
+ <text x="76" y="195" fill="#8ea0b8" font-family="ui-monospace,Consolas,monospace" font-size="14">1 file changed</text>
+ <text x="76" y="221" fill="#2dff83" font-family="ui-monospace,Consolas,monospace" font-size="14">$ git commit</text>
+ <path d="M456 218 C510 185 530 174 548 152" fill="none" stroke="url(#accent)" stroke-width="4" class="dash"/>
+ <g transform="translate(490 112)">
+  <rect width="150" height="102" rx="18" fill="#0c1727" stroke="#2dff83" stroke-width="2"/>
+  <circle cx="38" cy="34" r="20" fill="#111d2e"/><path d="M27 34 l11 -11 11 11 -11 11z" fill="#fff"/>
+  <text x="78" y="32" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700">GitHub</text>
+  <text x="78" y="52" fill="#91a1b5" font-family="Inter,Arial,sans-serif" font-size="11">branch</text>
+  <text x="78" y="70" fill="#91a1b5" font-family="Inter,Arial,sans-serif" font-size="11">Pull Request</text>
+ </g>
+ <g transform="translate(210 300)">
+  <rect width="150" height="40" rx="20" fill="#101e31" stroke="#4da3ff"/>
+  <text x="75" y="26" fill="#d8e6ff" font-family="Inter,Arial,sans-serif" font-size="13" text-anchor="middle">VS Code + Git</text>
+ </g>
+</g>
+<g transform="translate(1010 42)">
+ <circle cx="46" cy="45" r="34" fill="#0f1c2d" stroke="#4da3ff"/>
+ <text x="46" y="50" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="12" text-anchor="middle" font-weight="800">YOU</text>
+</g>
+</svg>
