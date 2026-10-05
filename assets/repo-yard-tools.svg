@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" role="img" aria-labelledby="t d">
+<title id="t">Repo Yard tool choices</title><desc id="d">Git, VS Code, terminal and GitHub work together.</desc>
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#2dff83"/><stop offset=".5" stop-color="#4da3ff"/><stop offset="1" stop-color="#ff6bcb"/></linearGradient><style>.float{animation:f 3s ease-in-out infinite}@keyframes f{50%{transform:translateY(-5px)}}@media(prefers-reduced-motion:reduce){.float{animation:none}}</style></defs>
+<rect width="900" height="260" rx="24" fill="#07101a"/><rect x="12" y="12" width="876" height="236" rx="18" fill="none" stroke="#24354d"/>
+<text x="32" y="45" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="800">Pick the tools that fit you.</text>
+<text x="32" y="67" fill="#92a1b4" font-family="Inter,Arial,sans-serif" font-size="13">Repo Yard teaches the skill, not a specific application.</text>
+<g font-family="Inter,Arial,sans-serif" text-anchor="middle">
+ <g class="float" transform="translate(70 92)"><rect width="160" height="112" rx="18" fill="#0d1827" stroke="#4da3ff"/><text x="80" y="44" fill="#4da3ff" font-size="28">⌘</text><text x="80" y="72" fill="#fff" font-size="15" font-weight="700">VS Code</text><text x="80" y="92" fill="#90a1b7" font-size="11">edit + visual Git</text></g>
+ <g class="float" style="animation-delay:.2s" transform="translate(260 92)"><rect width="160" height="112" rx="18" fill="#0d1827" stroke="#2dff83"/><text x="80" y="44" fill="#2dff83" font-size="25">>_</text><text x="80" y="72" fill="#fff" font-size="15" font-weight="700">Terminal</text><text x="80" y="92" fill="#90a1b7" font-size="11">run Git commands</text></g>
+ <g class="float" style="animation-delay:.4s" transform="translate(450 92)"><rect width="160" height="112" rx="18" fill="#0d1827" stroke="#ffb84d"/><text x="80" y="44" fill="#ffb84d" font-size="25">◆</text><text x="80" y="72" fill="#fff" font-size="15" font-weight="700">Git</text><text x="80" y="92" fill="#90a1b7" font-size="11">version control</text></g>
+ <g class="float" style="animation-delay:.6s" transform="translate(640 92)"><rect width="160" height="112" rx="18" fill="#0d1827" stroke="#ff6bcb"/><text x="80" y="44" fill="#ff6bcb" font-size="25">◉</text><text x="80" y="72" fill="#fff" font-size="15" font-weight="700">GitHub</text><text x="80" y="92" fill="#90a1b7" font-size="11">collaboration</text></g>
+</g>
+</svg>
